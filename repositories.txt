@@ -1,0 +1,2 @@
+https://api.github.com/repos/free-nodes/v2rayfree/contents
+https://api.github.com/repos/shaoyouvip/free/contents
