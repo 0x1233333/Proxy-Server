@@ -4,7 +4,7 @@ import logging
 import re
 import sys
 import time
-from urllib.parse import urlparse, quote, unquote
+from urllib.parse import urlparse
 import requests
 
 # 默认包含详细的日志记录功能
@@ -16,9 +16,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-# 公共订阅转换后端地址 (推测：可能会因高并发而限制，需自行验证其长期可用性)
-SUBCONVERTER_API = "https://api.v1.mk/sub"
 
 def read_repositories(file_path="repositories.txt"):
     """读取需要爬取的仓库API或直链"""
@@ -50,7 +47,7 @@ def extract_raw_urls(repos):
                     for item in data:
                         name = str(item.get("name", ""))
                         dl_url = item.get("download_url")
-                        # 排除图片、程序包等非文本文件
+                        # 排除图片、程序包等非纯文本节点文件
                         if dl_url and not name.endswith(('.png', '.jpg', '.zip', '.exe', '.mp4')):
                             raw_urls.append(dl_url)
             except Exception as e:
@@ -60,24 +57,18 @@ def extract_raw_urls(repos):
             
     return raw_urls
 
-def fetch_and_convert_nodes(raw_urls):
-    """利用外部 API 将各类型订阅还原为基础 URI，并在失败时尝试原生解析"""
+def fetch_and_extract_nodes(raw_urls):
+    """直接使用纯原生正则和 Base64 解码提取节点信息，剥离不稳定的外部 API"""
     nodes = set()
+    headers = {"User-Agent": "Mozilla/5.0"}
     
     for url in raw_urls:
-        added_count = 0
-        encoded_url = quote(url)
-        # 强制 target=mixed 以获取按行分割的 URI 明文
-        api_url = f"{SUBCONVERTER_API}?target=mixed&url={encoded_url}"
-        
-        # 路径1：尝试使用公开的订阅转换后端进行还原
+        logger.info(f"正在抓取并原生解析: {url}")
         try:
-            logger.info(f"尝试外部 API 转换: {url}")
-            res = requests.get(api_url, timeout=20)
-            res.raise_for_status()
+            res = requests.get(url, headers=headers, timeout=15)
             text = res.text.strip()
             
-            # 处理可能的 Base64 嵌套
+            # 首先尝试整体 Base64 解码
             try:
                 if not "://" in text[:50] and not text.startswith("{"):
                     decoded = base64.b64decode(text).decode('utf-8', errors='ignore')
@@ -86,40 +77,20 @@ def fetch_and_convert_nodes(raw_urls):
             except Exception:
                 pass
                 
+            # 逐行正则提取代理节点
             for line in text.splitlines():
                 line = line.strip()
                 if re.match(r'^(ss|vmess|vless|trojan)://', line):
                     nodes.add(line)
-                    added_count += 1
                     
         except Exception as e:
-            logger.warning(f"外部 API 转换失败 ({url}): {e}。")
+            logger.debug(f"处理 {url} 时发生跳过/失败: {e}")
 
-        # 路径2 (Fallback)：若外部转换失败或未提取到节点，通过纯文本正则暴力提取
-        if added_count == 0:
-            logger.info(f"开启回退机制，尝试原生文本提取: {url}")
-            try:
-                res = requests.get(url, timeout=15)
-                text = res.text.strip()
-                try:
-                    if not "://" in text[:50] and not text.startswith("{"):
-                        decoded = base64.b64decode(text).decode('utf-8', errors='ignore')
-                        if "://" in decoded:
-                            text = decoded
-                except Exception:
-                    pass
-                for line in text.splitlines():
-                    line = line.strip()
-                    if re.match(r'^(ss|vmess|vless|trojan)://', line):
-                        nodes.add(line)
-            except Exception as e:
-                logger.debug(f"原生正则提取同样失败 {url}: {e}")
-
-    logger.info(f"所有链接处理完毕，共提取 {len(nodes)} 个去重 URI。")
+    logger.info(f"所有链接处理完毕，共原生提取到 {len(nodes)} 个去重 URI。")
     return list(nodes)
 
 def parse_node_details(uri):
-    """解析 URI 获取核心参数"""
+    """解析 URI 获取核心参数以供后续重命名"""
     host, protocol, network = None, "unknown", "tcp"
     try:
         if uri.startswith('vmess://'):
@@ -141,7 +112,7 @@ def parse_node_details(uri):
                 match = re.search(r'@([^:]+):(\d+)', uri)
                 if match:
                     host = match.group(1)
-    except Exception as e:
+    except Exception:
         pass
     return host, protocol.upper(), network.upper()
 
@@ -168,7 +139,7 @@ def process_and_rename_nodes(nodes):
             continue
             
         country = get_geo_info(host)
-        time.sleep(1.5)  # 严格控制请求频率以防 IP 被封禁
+        time.sleep(1.5)  # 严格控制请求频率以防地理位置接口封禁 IP
         
         base_name = f"{country}_{network}_{protocol}"
         name_counter[base_name] = name_counter.get(base_name, 0) + 1
@@ -195,13 +166,13 @@ def process_and_rename_nodes(nodes):
     return valid_nodes
 
 def main():
-    logger.info(">>> 代理节点自动化订阅聚合脚本启动 <<<")
+    logger.info(">>> 代理节点自动化纯净提取脚本启动 <<<")
     repos = read_repositories()
     if not repos:
         return
         
     raw_urls = extract_raw_urls(repos)
-    raw_nodes = fetch_and_convert_nodes(raw_urls)
+    raw_nodes = fetch_and_extract_nodes(raw_urls)
     
     if not raw_nodes:
         logger.warning("本次未提取到任何可用节点，任务终止。")
@@ -216,7 +187,7 @@ def main():
     try:
         with open("sub.txt", "w", encoding="utf-8") as f:
             f.write(encoded_sub)
-        logger.info(">>> 成功封装最新订阅内容至 sub.txt <<<")
+        logger.info(">>> 成功封装最终订阅内容至 sub.txt <<<")
     except Exception as e:
         logger.error(f"最终写入文件失败: {e}")
 
