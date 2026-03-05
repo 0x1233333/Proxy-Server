@@ -1,13 +1,16 @@
 import base64
 import json
 import logging
+import os
 import re
+import shutil
+import subprocess
 import sys
 import time
 from urllib.parse import urlparse
 import requests
 
-# 默认包含详细的日志记录功能
+# 默认配置详细的日志记录功能
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -18,7 +21,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def read_repositories(file_path="repositories.txt"):
-    """读取需要爬取的仓库API或直链"""
+    """读取普通的 Github 仓库 URL 列表"""
     repos = []
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -26,98 +29,144 @@ def read_repositories(file_path="repositories.txt"):
                 line = line.strip()
                 if line and not line.startswith("#"):
                     repos.append(line)
-        logger.info(f"成功读取 {len(repos)} 个订阅源。")
+        logger.info(f"成功读取 {len(repos)} 个仓库源地址。")
     except Exception as e:
         logger.error(f"读取 repositories.txt 失败: {e}")
     return repos
 
-def extract_raw_urls(repos):
-    """如果提供的是 Github API 目录，则展开获取所有文件的 Raw 下载直链"""
-    raw_urls = []
-    headers = {"User-Agent": "Mozilla/5.0"}
-    
-    for url in repos:
-        if url.startswith("https://api.github.com/"):
-            try:
-                logger.info(f"正在解析 GitHub 目录结构: {url}")
-                res = requests.get(url, headers=headers, timeout=15)
-                res.raise_for_status()
-                data = res.json()
-                if isinstance(data, list):
-                    for item in data:
-                        name = str(item.get("name", ""))
-                        dl_url = item.get("download_url")
-                        # 排除图片、程序包等非纯文本节点文件
-                        if dl_url and not name.endswith(('.png', '.jpg', '.zip', '.exe', '.mp4')):
-                            raw_urls.append(dl_url)
-            except Exception as e:
-                logger.error(f"解析 Github API 失败 {url}: {e}")
-        else:
-            raw_urls.append(url)
-            
-    return raw_urls
+def clone_repo(repo_url, target_dir):
+    """使用 git clone --depth 1 拉取仓库最新文件，避免拉取庞大的历史记录"""
+    if os.path.exists(target_dir):
+        shutil.rmtree(target_dir)
+    try:
+        logger.info(f"正在拉取仓库: {repo_url}")
+        subprocess.run(
+            ["git", "clone", "--depth", "1", repo_url, target_dir],
+            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        )
+        return True
+    except subprocess.CalledProcessError as e:
+        logger.error(f"拉取仓库 {repo_url} 失败: {e}")
+        return False
 
-def fetch_and_extract_nodes(raw_urls):
-    """直接使用纯原生正则和 Base64 解码提取节点信息，剥离不稳定的外部 API"""
-    nodes = set()
-    headers = {"User-Agent": "Mozilla/5.0"}
+def extract_nodes_from_text(text):
+    """从纯文本(包括MD文件)中提取代理节点，支持 Mihomo 和 Sing-box 全协议，支持 Base64 自动解密"""
+    found_nodes = set()
     
-    for url in raw_urls:
-        logger.info(f"正在抓取并原生解析: {url}")
-        try:
-            res = requests.get(url, headers=headers, timeout=15)
-            text = res.text.strip()
+    # 尝试将整体视为 Base64 解码 (应对全文件 Base64 的情况)
+    try:
+        if not "://" in text[:50] and not text.startswith("{"):
+            decoded = base64.b64decode(text).decode('utf-8', errors='ignore')
+            if "://" in decoded:
+                text += "\n" + decoded
+    except Exception:
+        pass
+
+    # 提取节点特征的正则：支持 ss/ssr/vmess/vless/trojan/tuic/hysteria/hy2/wg/wireguard/socks
+    # 忽略大小写，遇到空格或特殊括号截断
+    lines = text.splitlines()
+    regex_pattern = re.compile(r'(?i)(ss|ssr|vmess|vless|trojan|tuic|hysteria2?|hy2|wg|wireguard|socks5?)://[^\s"' + r"'<>]+")
+    
+    for line in lines:
+        line = line.strip()
+        match = regex_pattern.search(line)
+        if match:
+            found_nodes.add(match.group(0))
             
-            # 首先尝试整体 Base64 解码
-            try:
-                if not "://" in text[:50] and not text.startswith("{"):
-                    decoded = base64.b64decode(text).decode('utf-8', errors='ignore')
-                    if "://" in decoded:
-                        text = decoded
-            except Exception:
-                pass
+    return found_nodes
+
+def process_local_directory(base_dir):
+    """遍历本地目录中的所有文件并提取节点"""
+    all_nodes = set()
+    
+    for root, _, files in os.walk(base_dir):
+        if '.git' in root:
+            continue
+            
+        for file in files:
+            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.zip', '.exe', '.mp4', '.pdf')):
+                continue
                 
-            # 逐行正则提取代理节点
-            for line in text.splitlines():
-                line = line.strip()
-                if re.match(r'^(ss|vmess|vless|trojan)://', line):
-                    nodes.add(line)
+            file_path = os.path.join(root, file)
+            try:
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
                     
-        except Exception as e:
-            logger.debug(f"处理 {url} 时发生跳过/失败: {e}")
+                nodes = extract_nodes_from_text(content)
+                if nodes:
+                    all_nodes.update(nodes)
+            except Exception as e:
+                logger.debug(f"读取文件 {file_path} 失败: {e}")
+                
+    return all_nodes
 
-    logger.info(f"所有链接处理完毕，共原生提取到 {len(nodes)} 个去重 URI。")
-    return list(nodes)
+def clean_and_deduplicate(nodes):
+    """强力去重：剥离原有备注信息，仅比较核心配置数据，兼容全协议"""
+    unique_map = {}
+    
+    for uri in nodes:
+        try:
+            uri_lower = uri.lower()
+            if uri_lower.startswith('vmess://'):
+                b64_str = uri[8:]
+                b64_str += '=' * (-len(b64_str) % 4)
+                data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
+                data.pop('ps', None)
+                core_id = "vmess://" + json.dumps(data, sort_keys=True)
+                unique_map[core_id] = uri
+            elif uri_lower.startswith('ssr://'):
+                # SSR 结构特殊，采用原链直接去重
+                unique_map[uri] = uri
+            else:
+                # 其他协议 (vless, trojan, tuic, hy2 等) 剥离 # 号后的备注
+                core_id = uri.split('#')[0]
+                unique_map[core_id] = uri
+        except Exception:
+            # 解析失败的节点保留原样
+            unique_map[uri] = uri
+            
+    logger.info(f"去重前节点数: {len(nodes)}，强力去重后剩余: {len(unique_map)}")
+    return list(unique_map.values())
 
 def parse_node_details(uri):
-    """解析 URI 获取核心参数以供后续重命名"""
+    """提取节点的 Host 和协议信息用于归属地查询，兼容新协议"""
     host, protocol, network = None, "unknown", "tcp"
     try:
-        if uri.startswith('vmess://'):
+        uri_lower = uri.lower()
+        if uri_lower.startswith('vmess://'):
             protocol = 'vmess'
             b64_str = uri[8:]
             b64_str += '=' * (-len(b64_str) % 4)
             data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
-            host = data.get('add')
+            host = data.get('add') or data.get('host')
             network = data.get('net', 'tcp')
-        elif uri.startswith(('vless://', 'trojan://', 'ss://')):
+        elif uri_lower.startswith('ssr://'):
+            protocol = 'ssr'
+            # 尝试浅层解析 SSR 拿到 Host，失败则放弃并依靠默认值
+            b64_str = uri[6:]
+            b64_str += '=' * (-len(b64_str) % 4)
+            decoded = base64.urlsafe_b64decode(b64_str).decode('utf-8', errors='ignore')
+            host = decoded.split(':')[0]
+        else:
+            # 兼容 vless, trojan, tuic, hy2, wg, socks 等标准 URI 结构
             parsed = urlparse(uri)
-            protocol = parsed.scheme
+            protocol = parsed.scheme.lower()
             host = parsed.hostname
             if 'type=' in parsed.query:
                 match = re.search(r'type=([^&]+)', parsed.query)
                 if match:
                     network = match.group(1)
-            elif uri.startswith('ss://'):
+            elif protocol == 'ss':
                 match = re.search(r'@([^:]+):(\d+)', uri)
                 if match:
                     host = match.group(1)
     except Exception:
         pass
+        
     return host, protocol.upper(), network.upper()
 
 def get_geo_info(ip):
-    """根据 IP 或域名查询国家代码"""
+    """查询 IP 归属地"""
     try:
         res = requests.get(f"http://ip-api.com/json/{ip}?fields=countryCode", timeout=3)
         if res.status_code == 200:
@@ -128,24 +177,25 @@ def get_geo_info(ip):
     return "UN"
 
 def process_and_rename_nodes(nodes):
-    """重命名逻辑处理：国家_网络_协议_自增数字"""
+    """节点重命名: 国家_网络_协议_序号"""
     valid_nodes = []
     name_counter = {}
     
-    logger.info("开始获取节点归属地并重新命名 (需遵守API速率限制，请耐心等待)...")
+    logger.info("开始获取节点归属地并重新命名 (需遵守API防DDoS速率限制，稍等片刻)...")
     for uri in nodes:
         host, protocol, network = parse_node_details(uri)
-        if not host:
-            continue
-            
-        country = get_geo_info(host)
-        time.sleep(1.5)  # 严格控制请求频率以防地理位置接口封禁 IP
         
+        # 即使无法解析 Host（如特殊混淆格式），也不丢弃节点，直接标记为 UN
+        if not host:
+            country = "UN"
+        else:
+            country = get_geo_info(host)
+            time.sleep(1.5)  # 严格限制并发速率，防止 ip-api 封禁
+            
         base_name = f"{country}_{network}_{protocol}"
         name_counter[base_name] = name_counter.get(base_name, 0) + 1
         final_name = f"{base_name}_{name_counter[base_name]}"
         
-        new_uri = uri
         try:
             if protocol == 'VMESS':
                 b64_str = uri[8:]
@@ -154,6 +204,7 @@ def process_and_rename_nodes(nodes):
                 data['ps'] = final_name
                 new_uri = "vmess://" + base64.b64encode(json.dumps(data, separators=(',', ':')).encode('utf-8')).decode('utf-8')
             else:
+                # SSR 及其他标准格式统一通过追加 / 替换 # 号进行重命名
                 if '#' in uri:
                     new_uri = uri.split('#')[0] + '#' + final_name
                 else:
@@ -166,30 +217,52 @@ def process_and_rename_nodes(nodes):
     return valid_nodes
 
 def main():
-    logger.info(">>> 代理节点自动化纯净提取脚本启动 <<<")
+    logger.info(">>> 本地 Git 模式全协议代理提取脚本启动 <<<")
     repos = read_repositories()
     if not repos:
         return
         
-    raw_urls = extract_raw_urls(repos)
-    raw_nodes = fetch_and_extract_nodes(raw_urls)
+    temp_workspace = "temp_repos"
+    if not os.path.exists(temp_workspace):
+        os.makedirs(temp_workspace)
+        
+    raw_nodes = set()
     
+    for i, repo in enumerate(repos):
+        repo_dir = os.path.join(temp_workspace, f"repo_{i}")
+        if clone_repo(repo, repo_dir):
+            nodes_found = process_local_directory(repo_dir)
+            raw_nodes.update(nodes_found)
+            logger.info(f"从仓库 {repo} 累计提取到 {len(nodes_found)} 个节点")
+            
     if not raw_nodes:
-        logger.warning("本次未提取到任何可用节点，任务终止。")
+        logger.warning("本次未提取到任何可用节点。")
+        shutil.rmtree(temp_workspace)
         return
         
-    renamed_nodes = process_and_rename_nodes(raw_nodes)
+    # 清洗和强力去重
+    unique_nodes = clean_and_deduplicate(list(raw_nodes))
     
-    # 将提取并命名后的内容编码为 Base64
+    # 归属地获取与重命名
+    renamed_nodes = process_and_rename_nodes(unique_nodes)
+    
+    # Base64 重新封装
     plain_text_sub = "\n".join(renamed_nodes)
     encoded_sub = base64.b64encode(plain_text_sub.encode('utf-8')).decode('utf-8')
     
     try:
         with open("sub.txt", "w", encoding="utf-8") as f:
             f.write(encoded_sub)
-        logger.info(">>> 成功封装最终订阅内容至 sub.txt <<<")
+        logger.info(">>> 成功封装全协议订阅内容至 sub.txt <<<")
     except Exception as e:
-        logger.error(f"最终写入文件失败: {e}")
+        logger.error(f"写入文件失败: {e}")
+        
+    # 清理临时文件
+    try:
+        shutil.rmtree(temp_workspace)
+        logger.info("临时仓库目录清理完毕。")
+    except Exception as e:
+        logger.debug(f"清理临时目录失败: {e}")
 
 if __name__ == "__main__":
     main()
