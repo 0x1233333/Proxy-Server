@@ -1,8 +1,8 @@
-name: Advanced SubConverter Aggregator
+name: Omnipotent Sub Aggregator
 
 on:
   schedule:
-    - cron: '0 1 * * *' 
+    - cron: '0 1 * * *'
   workflow_dispatch:
 
 permissions:
@@ -22,16 +22,17 @@ jobs:
 
       - name: Run Aggregator in Virtual Environment
         run: |
-          # 创建并激活虚拟环境
+          # 建立并激活虚拟环境
           python -m venv venv
           source venv/bin/activate
-          # 安装依赖并执行重构代码
+          # 安装依赖
           pip install --upgrade pip
           pip install -r requirements.txt
+          # 执行节点采集代码
           python main.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update proxy nodes with external subconverter backend"
+          commit_message: "Auto-update all-protocol proxy nodes via Local Git"
           file_pattern: sub.txt
