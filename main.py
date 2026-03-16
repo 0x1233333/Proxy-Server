@@ -48,7 +48,7 @@ def clone_repo(repo_url, target_dir):
         return False
 
 def extract_nodes_from_text(text):
-    """全协议提取节点，支持 Base64 解码"""
+    """全协议初步提取，支持全文件 Base64 解码"""
     found_nodes = set()
     try:
         if not "://" in text[:50] and not text.startswith("{"):
@@ -59,7 +59,6 @@ def extract_nodes_from_text(text):
         pass
 
     lines = text.splitlines()
-    # 基础正则匹配
     regex_pattern = re.compile(r'(?i)(ss|ssr|vmess|vless|trojan|tuic|hysteria2?|hy2|wg|wireguard|socks5?)://[^\s"' + r"'<>]+")
     
     for line in lines:
@@ -91,89 +90,128 @@ def process_local_directory(base_dir):
     return all_nodes
 
 def is_valid_uuid(val):
-    """严格校验 UUID 格式，防止广告文本导致客户端崩溃"""
+    """严格校验 UUID 格式"""
     try:
         uuid.UUID(str(val))
         return True
     except ValueError:
         return False
 
+def validate_and_format_uri(uri):
+    """
+    深度清洗与格式化：强制修复 JSON 类型错误，拦截残缺的 SSR，去除尾部残留垃圾。
+    一旦发现会引发 Go 客户端崩溃的严重残缺，直接返回 None 丢弃。
+    """
+    try:
+        uri = uri.strip()
+        # 移除 Markdown 或中文括号等抓取时连带的尾部污染
+        uri = re.split(r'[`【】\s]', uri)[0].strip()
+        if len(uri) < 15:
+            return None
+
+        uri_lower = uri.lower()
+
+        if uri_lower.startswith('vmess://'):
+            b64_str = uri[8:]
+            b64_str = b64_str.split('#')[0]
+            # 仅允许合法 Base64 字符
+            b64_str = re.sub(r'[^a-zA-Z0-9\+\/\=\-_]', '', b64_str)
+            b64_str += '=' * (-len(b64_str) % 4)
+            
+            data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
+            
+            # 缺失核心参数的残缺配置直接抛弃
+            if not all(k in data for k in ('add', 'port', 'id')):
+                return None
+            if not data['add'] or not str(data['port']).isdigit() or not data['id']:
+                return None
+
+            # 核心修复：强制将数字类型的 'v' 转换为 Go 结构体要求的 String 类型
+            # 强制将端口统一转为 Integer 类型以匹配主流客户端格式
+            data['v'] = "2"
+            data['port'] = int(data['port'])
+            
+            # 剔除可能造成干扰的非法字段
+            data.pop('test_name', None)
+
+            clean_b64 = base64.b64encode(json.dumps(data, separators=(',', ':')).encode('utf-8')).decode('utf-8')
+            return f"vmess://{clean_b64}"
+
+        elif uri_lower.startswith('ssr://'):
+            b64_str = uri[6:]
+            b64_str = b64_str.split('#')[0]
+            b64_str = re.sub(r'[^a-zA-Z0-9\-\_\+\/\=]', '', b64_str)
+            b64_str += '=' * (-len(b64_str) % 4)
+            
+            decoded = base64.urlsafe_b64decode(b64_str).decode('utf-8', errors='ignore')
+            parts = decoded.split(':')
+            
+            # 拦截导致 Panic 的罪魁祸首：缺少端口或无法分割的 SSR 链接
+            if len(parts) < 6 or not parts[1].isdigit():
+                return None
+            return uri
+
+        elif uri_lower.startswith(('vless://', 'trojan://')):
+            parsed = urlparse(uri)
+            if not parsed.hostname or not parsed.port or not parsed.username:
+                return None
+            # VLESS 的 username 必须是标准 UUID，踢掉所有混进来的 Telegram 广告账号
+            if uri_lower.startswith('vless://') and not is_valid_uuid(parsed.username):
+                return None
+            return uri
+
+        elif uri_lower.startswith('ss://'):
+            parsed = urlparse(uri)
+            if not parsed.hostname:
+                return None
+            return uri
+
+        # Tuic, Hysteria, WG 等其他协议的底线检测
+        parsed = urlparse(uri)
+        if not parsed.hostname:
+            return None
+        return uri
+
+    except Exception:
+        # 遇到任何解析报错，绝不保留，直接丢弃
+        return None
+
 def clean_and_deduplicate(nodes):
-    """
-    严格清洗与去重：剥离损坏数据，拒绝非法格式，仅保留高质量原汁原味的 URI。
-    """
+    """执行最终的深度验证与去重拦截"""
     unique_map = {}
     for uri in nodes:
-        try:
-            # 过滤明显被截断或破损的极短垃圾数据
-            if len(uri) < 15:
-                continue
-
-            uri_lower = uri.lower()
+        clean_uri = validate_and_format_uri(uri)
+        if not clean_uri:
+            continue
             
+        try:
+            uri_lower = clean_uri.lower()
             if uri_lower.startswith('vmess://'):
-                b64_str = uri[8:]
+                b64_str = clean_uri[8:]
                 b64_str += '=' * (-len(b64_str) % 4)
-                try:
-                    data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
-                except Exception:
-                    continue # JSON 解析失败，直接判定为垃圾数据抛弃
+                data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
                 
-                # 校验核心字段，缺失则直接抛弃
-                if 'add' not in data or 'port' not in data or not data['add']:
-                    continue
-                    
                 core_data = data.copy()
                 core_data.pop('ps', None)
                 core_id = "vmess://" + json.dumps(core_data, sort_keys=True)
                 
                 if core_id not in unique_map:
-                    unique_map[core_id] = uri
-
-            elif uri_lower.startswith('vless://'):
-                parsed = urlparse(uri)
-                # VLESS 必须严格包含 username(UUID), hostname 和 port
-                if not parsed.hostname or not parsed.port or not parsed.username:
-                    continue
-                    
-                # 严格要求 VLESS 必须为标准 UUID，剔除混入的 Telegram 广告账号
-                if not is_valid_uuid(parsed.username):
-                    continue
-                    
-                core_id = uri.split('#')[0]
-                if core_id not in unique_map:
-                    unique_map[core_id] = uri
-                    
-            elif uri_lower.startswith('trojan://'):
-                parsed = urlparse(uri)
-                if not parsed.hostname or not parsed.port or not parsed.username:
-                    continue
-                core_id = uri.split('#')[0]
-                if core_id not in unique_map:
-                    unique_map[core_id] = uri
-
+                    unique_map[core_id] = clean_uri
             elif uri_lower.startswith('ssr://'):
-                if uri not in unique_map:
-                    unique_map[uri] = uri
-
+                if clean_uri not in unique_map:
+                    unique_map[clean_uri] = clean_uri
             else:
-                # ss, tuic, hysteria 等其他协议，通过 urlparse 基础有效性验证
-                parsed = urlparse(uri)
-                if not parsed.hostname:
-                    continue
-                core_id = uri.split('#')[0]
+                core_id = clean_uri.split('#')[0]
                 if core_id not in unique_map:
-                    unique_map[core_id] = uri
-                    
+                    unique_map[core_id] = clean_uri
         except Exception:
-            # 【关键修复】：一旦解析过程中出现任何异常数组越界或报错，绝不手软，直接丢弃该数据！
             continue
             
-    logger.info(f"提取总原始数据数: {len(nodes)}，严格质检与去重后保留可用节点: {len(unique_map)}")
+    logger.info(f"提取总原始数据: {len(nodes)}，严格拦截质检后保留可用节点: {len(unique_map)}")
     return list(unique_map.values())
 
 def main():
-    logger.info(">>> 极速纯净版：代理自动化全量收集脚本启动 (含严格防崩溃质检) <<<")
+    logger.info(">>> 极速纯净版：代理自动化全量收集脚本启动 (含防崩溃协议质检) <<<")
     repos = read_repositories()
     if not repos:
         return
@@ -196,21 +234,18 @@ def main():
         shutil.rmtree(temp_workspace, ignore_errors=True)
         return
         
-    # 清洗和强力去重，剔除所有可能引发崩溃的毒药数据
     final_nodes = clean_and_deduplicate(list(raw_nodes))
     
-    # Base64 重新封装
     plain_text_sub = "\n".join(final_nodes)
     encoded_sub = base64.b64encode(plain_text_sub.encode('utf-8')).decode('utf-8')
     
     try:
         with open("sub.txt", "w", encoding="utf-8") as f:
             f.write(encoded_sub)
-        logger.info(f">>> 成功将 {len(final_nodes)} 个可用节点封装至 sub.txt <<<")
+        logger.info(f">>> 成功将 {len(final_nodes)} 个合格节点封装至 sub.txt <<<")
     except Exception as e:
         logger.error(f"写入文件失败: {e}")
         
-    # 清理临时文件
     shutil.rmtree(temp_workspace, ignore_errors=True)
 
 if __name__ == "__main__":
