@@ -6,3 +6,10 @@ https://github.com/free-nodes/clashfree
 https://github.com/clashv2ray-hub/v2rayfree
 https://github.com/clashv2ray-hub/clashfree
 https://github.com/telegeam/freenode
+https://github.com/chengaopan/AutoMergePublicNodes
+https://github.com/free18/v2ray
+https://github.com/Barabama/FreeNodes
+https://github.com/snakem982/proxypool
+https://github.com/Jsnzkpg/Jsnzkpg
+https://github.com/shuaidaoya/FreeNodes
+https://github.com/ripaojiedian/freenode
