@@ -11,7 +11,6 @@ permissions:
 jobs:
   aggregate-and-convert:
     runs-on: ubuntu-latest
-    # 添加环境变量，强制 Actions 启用最新的 Node.js 24 以消除弃用警告
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
@@ -25,8 +24,10 @@ jobs:
 
       - name: Run Aggregator in Virtual Environment
         run: |
-          # 建立并激活虚拟环境
-          python -m venv venv
+          # 强制清理可能被误提交到仓库的旧虚拟环境文件夹，防止冲突
+          rm -rf venv
+          # 建立并激活全新的虚拟环境
+          python3 -m venv venv
           source venv/bin/activate
           # 安装依赖
           pip install --upgrade pip
