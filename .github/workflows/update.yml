@@ -2,7 +2,6 @@ name: Omnipotent Sub Aggregator
 
 on:
   schedule:
-    # 每天 UTC 02:15 运行 (对应北京时间 10:15)
     - cron: '15 2 * * *'
   workflow_dispatch:
 
@@ -12,6 +11,9 @@ permissions:
 jobs:
   aggregate-and-convert:
     runs-on: ubuntu-latest
+    # 添加环境变量，强制 Actions 启用最新的 Node.js 24 以消除弃用警告
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,5 +38,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update all-protocol proxy nodes with State Mapping"
-          # 注意：加入了 node_mapping.json，以确保节点状态库得到同步
           file_pattern: "sub.txt node_mapping.json"
