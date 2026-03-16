@@ -2,7 +2,8 @@ name: Omnipotent Sub Aggregator
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    # 每天 UTC 02:15 运行 (对应北京时间 10:15)
+    - cron: '15 2 * * *'
   workflow_dispatch:
 
 permissions:
@@ -28,11 +29,12 @@ jobs:
           # 安装依赖
           pip install --upgrade pip
           pip install -r requirements.txt
-          # 执行节点采集代码
+          # 执行增量节点采集代码
           python main.py
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update all-protocol proxy nodes via Local Git"
-          file_pattern: sub.txt
+          commit_message: "Auto-update all-protocol proxy nodes with State Mapping"
+          # 注意：加入了 node_mapping.json，以确保节点状态库得到同步
+          file_pattern: "sub.txt node_mapping.json"
