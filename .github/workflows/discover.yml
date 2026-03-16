@@ -1,0 +1,43 @@
+name: Weekly Repo Discovery
+
+on:
+  schedule:
+    # 每周日 UTC 00:00 运行一次 (北京时间周日 08:00)
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # 允许你随时手动点击运行
+
+permissions:
+  contents: write
+
+jobs:
+  discover-new-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Discovery Script in Virtual Environment
+        env:
+          # 必须注入 GitHub Token 供搜索 API 鉴权使用
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 建立并激活虚拟环境
+          python -m venv venv
+          source venv/bin/activate
+          # 安装基础请求库
+          pip install --upgrade pip
+          pip install requests
+          # 执行自动发现脚本
+          python discover.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-discover and update repo lists & stats"
+          # 会自动提交变动的 repositories.txt, blacklist.txt, keyword_stats.json
+          file_pattern: "*.txt *.json"
