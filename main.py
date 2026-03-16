@@ -6,6 +6,8 @@ import re
 import shutil
 import subprocess
 import sys
+import uuid
+from urllib.parse import urlparse
 
 # 默认配置详细的日志记录功能
 logging.basicConfig(
@@ -57,6 +59,7 @@ def extract_nodes_from_text(text):
         pass
 
     lines = text.splitlines()
+    # 基础正则匹配
     regex_pattern = re.compile(r'(?i)(ss|ssr|vmess|vless|trojan|tuic|hysteria2?|hy2|wg|wireguard|socks5?)://[^\s"' + r"'<>]+")
     
     for line in lines:
@@ -87,45 +90,90 @@ def process_local_directory(base_dir):
                 logger.debug(f"读取文件 {file_path} 失败: {e}")
     return all_nodes
 
+def is_valid_uuid(val):
+    """严格校验 UUID 格式，防止广告文本导致客户端崩溃"""
+    try:
+        uuid.UUID(str(val))
+        return True
+    except ValueError:
+        return False
+
 def clean_and_deduplicate(nodes):
     """
-    强力去重：仅对比核心配置，保留原汁原味的 URI。
-    即使两个节点名字不同，只要底层 IP 和端口配置一样，也会被当做重复项剔除。
+    严格清洗与去重：剥离损坏数据，拒绝非法格式，仅保留高质量原汁原味的 URI。
     """
     unique_map = {}
     for uri in nodes:
         try:
+            # 过滤明显被截断或破损的极短垃圾数据
+            if len(uri) < 15:
+                continue
+
             uri_lower = uri.lower()
+            
             if uri_lower.startswith('vmess://'):
                 b64_str = uri[8:]
                 b64_str += '=' * (-len(b64_str) % 4)
-                data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
+                try:
+                    data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
+                except Exception:
+                    continue # JSON 解析失败，直接判定为垃圾数据抛弃
                 
-                # 复制一份核心数据用于生成唯一特征码，忽略原本的名字(ps)
+                # 校验核心字段，缺失则直接抛弃
+                if 'add' not in data or 'port' not in data or not data['add']:
+                    continue
+                    
                 core_data = data.copy()
                 core_data.pop('ps', None)
                 core_id = "vmess://" + json.dumps(core_data, sort_keys=True)
                 
                 if core_id not in unique_map:
                     unique_map[core_id] = uri
-            elif uri_lower.startswith('ssr://'):
-                if uri not in unique_map:
-                    unique_map[uri] = uri
-            else:
-                # vless, trojan 等截断 # 后的备注内容作为唯一特征码
+
+            elif uri_lower.startswith('vless://'):
+                parsed = urlparse(uri)
+                # VLESS 必须严格包含 username(UUID), hostname 和 port
+                if not parsed.hostname or not parsed.port or not parsed.username:
+                    continue
+                    
+                # 严格要求 VLESS 必须为标准 UUID，剔除混入的 Telegram 广告账号
+                if not is_valid_uuid(parsed.username):
+                    continue
+                    
                 core_id = uri.split('#')[0]
                 if core_id not in unique_map:
                     unique_map[core_id] = uri
+                    
+            elif uri_lower.startswith('trojan://'):
+                parsed = urlparse(uri)
+                if not parsed.hostname or not parsed.port or not parsed.username:
+                    continue
+                core_id = uri.split('#')[0]
+                if core_id not in unique_map:
+                    unique_map[core_id] = uri
+
+            elif uri_lower.startswith('ssr://'):
+                if uri not in unique_map:
+                    unique_map[uri] = uri
+
+            else:
+                # ss, tuic, hysteria 等其他协议，通过 urlparse 基础有效性验证
+                parsed = urlparse(uri)
+                if not parsed.hostname:
+                    continue
+                core_id = uri.split('#')[0]
+                if core_id not in unique_map:
+                    unique_map[core_id] = uri
+                    
         except Exception:
-            # 解析失败的节点保守保留
-            if uri not in unique_map:
-                unique_map[uri] = uri
+            # 【关键修复】：一旦解析过程中出现任何异常数组越界或报错，绝不手软，直接丢弃该数据！
+            continue
             
-    logger.info(f"提取总节点数: {len(nodes)}，核心去重后保留: {len(unique_map)}")
+    logger.info(f"提取总原始数据数: {len(nodes)}，严格质检与去重后保留可用节点: {len(unique_map)}")
     return list(unique_map.values())
 
 def main():
-    logger.info(">>> 极速纯净版：代理自动化全量收集脚本启动 <<<")
+    logger.info(">>> 极速纯净版：代理自动化全量收集脚本启动 (含严格防崩溃质检) <<<")
     repos = read_repositories()
     if not repos:
         return
@@ -144,11 +192,11 @@ def main():
             raw_nodes.update(nodes_found)
             
     if not raw_nodes:
-        logger.warning("本次未提取到任何可用节点。")
+        logger.warning("本次未提取到任何数据。")
         shutil.rmtree(temp_workspace, ignore_errors=True)
         return
         
-    # 清洗和强力去重，直接获取保留原名的节点列表
+    # 清洗和强力去重，剔除所有可能引发崩溃的毒药数据
     final_nodes = clean_and_deduplicate(list(raw_nodes))
     
     # Base64 重新封装
@@ -158,7 +206,7 @@ def main():
     try:
         with open("sub.txt", "w", encoding="utf-8") as f:
             f.write(encoded_sub)
-        logger.info(">>> 成功封装全部订阅内容至 sub.txt <<<")
+        logger.info(f">>> 成功将 {len(final_nodes)} 个可用节点封装至 sub.txt <<<")
     except Exception as e:
         logger.error(f"写入文件失败: {e}")
         
