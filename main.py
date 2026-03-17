@@ -7,8 +7,6 @@ import shutil
 import subprocess
 import sys
 import uuid
-import socket
-import concurrent.futures
 from urllib.parse import urlparse
 
 # 默认配置详细的日志记录功能
@@ -92,7 +90,7 @@ def process_local_directory(base_dir):
     return all_nodes
 
 def is_valid_uuid(val):
-    """严格校验 UUID 格式"""
+    """严格校验 UUID 格式，防止广告文本混入导致客户端 Go 内核崩溃"""
     try:
         uuid.UUID(str(val))
         return True
@@ -101,28 +99,39 @@ def is_valid_uuid(val):
 
 def validate_and_format_uri(uri):
     """
-    严格清洗与格式化，拦截所有能引发核心崩溃的残缺链接。
+    【铁血质检员】：严格清洗与格式化
+    强制修复 JSON 类型错误，拦截残缺的 SSR，去除尾部残留垃圾。
+    一旦发现会引发 Go 客户端崩溃的严重残缺，直接返回 None 彻底丢弃。
     """
     try:
         uri = uri.strip()
+        # 移除 Markdown 代码块或中文括号等抓取时连带的尾部污染
         uri = re.split(r'[`【】\s]', uri)[0].strip()
         if len(uri) < 15:
             return None
 
         uri_lower = uri.lower()
 
+        # ======== 1. VMESS 严格模式 ========
         if uri_lower.startswith('vmess://'):
             b64_str = uri[8:]
+            # 丢弃原有的额外备注干扰
             b64_str = b64_str.split('#')[0]
+            # 仅允许合法 Base64 字符
             b64_str = re.sub(r'[^a-zA-Z0-9\+\/\=\-_]', '', b64_str)
             b64_str += '=' * (-len(b64_str) % 4)
             
             data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
             
+            # 缺失核心参数的残缺配置直接抛弃
             if not all(k in data for k in ('add', 'port', 'id')):
                 return None
+                
+            # 空地址、非数字端口抛弃
             if not data['add'] or not str(data['port']).isdigit():
                 return None
+                
+            # VMESS 的 ID 也必须是标准的 UUID
             if not is_valid_uuid(data['id']):
                 return None
 
@@ -130,14 +139,19 @@ def validate_and_format_uri(uri):
             if not (1 <= port_int <= 65535):
                 return None
 
+            # 核心修复：强制将数字类型的 'v' 转换为 Go 结构体要求的 String 类型
+            # 强制将端口统一转为 Integer 类型
             data['v'] = "2"
             data['port'] = port_int
+            
+            # 剔除伪造字段和废弃的 PS 名称（为去重做准备）
             data.pop('test_name', None)
             data.pop('ps', None)
 
             clean_b64 = base64.b64encode(json.dumps(data, separators=(',', ':')).encode('utf-8')).decode('utf-8')
             return f"vmess://{clean_b64}"
 
+        # ======== 2. SSR 严格模式 ========
         elif uri_lower.startswith('ssr://'):
             b64_str = uri[6:]
             b64_str = b64_str.split('#')[0]
@@ -147,21 +161,28 @@ def validate_and_format_uri(uri):
             decoded = base64.urlsafe_b64decode(b64_str).decode('utf-8', errors='ignore')
             parts = decoded.split(':')
             
+            # 拦截导致 Panic 的罪魁祸首：缺少端口或无法分割的 SSR 链接
             if len(parts) < 6 or not parts[1].isdigit():
                 return None
             port_int = int(parts[1])
             if not (1 <= port_int <= 65535):
                 return None
+                
             return uri
 
+        # ======== 3. VLESS / TROJAN 严格模式 ========
         elif uri_lower.startswith(('vless://', 'trojan://')):
             parsed = urlparse(uri)
             if not parsed.hostname or not parsed.port or not parsed.username:
                 return None
+                
+            # VLESS 的 username 必须是标准 UUID
             if uri_lower.startswith('vless://') and not is_valid_uuid(parsed.username):
                 return None
+                
             return uri
 
+        # ======== 4. 其他协议基础验证 ========
         elif uri_lower.startswith('ss://'):
             parsed = urlparse(uri)
             if not parsed.hostname:
@@ -174,101 +195,41 @@ def validate_and_format_uri(uri):
         return uri
 
     except Exception:
+        # 遇到任何解析报错（如 URL 解析失败、数组越界），绝不保留，直接丢弃
         return None
 
-def get_host_and_port(uri):
-    """从清洗后的标准 URI 中提取 Host 和 Port 用于 TCP 测活"""
-    try:
-        uri_lower = uri.lower()
-        if uri_lower.startswith('vmess://'):
-            b64_str = uri[8:]
-            b64_str += '=' * (-len(b64_str) % 4)
-            data = json.loads(base64.b64decode(b64_str).decode('utf-8', errors='ignore'))
-            return data.get('add'), int(data.get('port'))
-            
-        elif uri_lower.startswith('ssr://'):
-            b64_str = uri[6:].split('#')[0]
-            b64_str += '=' * (-len(b64_str) % 4)
-            decoded = base64.urlsafe_b64decode(b64_str).decode('utf-8', errors='ignore')
-            parts = decoded.split(':')
-            return parts[0], int(parts[1])
-            
-        else:
-            parsed = urlparse(uri)
-            host = parsed.hostname
-            port = parsed.port
-            # 兼容处理 IPv6 格式的中括号剥离，socket 连接时不需要外层括号
-            if host:
-                host = host.strip('[]')
-            if not host and '@' in uri:
-                match = re.search(r'@([^:]+):(\d+)', uri)
-                if match:
-                    return match.group(1).strip('[]'), int(match.group(2))
-            return host, port
-    except Exception:
-        return None, None
-
-def check_node_alive(uri, timeout=2.0):
-    """TCP Socket 基础连通性测试"""
-    host, port = get_host_and_port(uri)
-    if not host or not port:
-        return False
-    try:
-        with socket.create_connection((host, int(port)), timeout=timeout):
-            return True
-    except Exception:
-        return False
-
-def filter_alive_nodes(nodes, max_workers=100):
-    """百线程并发测活，抛弃物理断连的死节点"""
-    alive_nodes = []
-    total = len(nodes)
-    logger.info(f"开启 {max_workers} 线程进行 TCP 并发测活，待测节点共计 {total} 个，请耐心等待...")
-    
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_uri = {executor.submit(check_node_alive, uri): uri for uri in nodes}
-        done_count = 0
-        for future in concurrent.futures.as_completed(future_to_uri):
-            uri = future_to_uri[future]
-            done_count += 1
-            
-            # 每测试完 2000 个节点打印一次进度，防止撑爆 GitHub Actions 日志限制
-            if done_count % 2000 == 0 or done_count == total:
-                logger.info(f"测活进度: {done_count} / {total} (当前存活: {len(alive_nodes)})")
-                
-            try:
-                if future.result():
-                    alive_nodes.append(uri)
-            except Exception:
-                pass
-                
-    logger.info(f"测活彻底完成！剔除死节点后，最终保留存活节点数: {len(alive_nodes)}")
-    return alive_nodes
-
 def clean_and_deduplicate(nodes):
-    """严格拦截质检与核心去重"""
+    """通过严格质检并执行核心级去重"""
     unique_map = {}
     for uri in nodes:
+        # 第一关：送入铁血质检员，不合格的返回 None
         clean_uri = validate_and_format_uri(uri)
         if not clean_uri:
             continue
+            
+        # 第二关：去重，提取纯净的标识符进行防重复比对
         try:
             uri_lower = clean_uri.lower()
-            if uri_lower.startswith('vmess://') or uri_lower.startswith('ssr://'):
+            if uri_lower.startswith('vmess://'):
+                # vmess 的 clean_uri 已经被 validate_and_format_uri 去除了 ps 名字并标准化了
+                if clean_uri not in unique_map:
+                    unique_map[clean_uri] = clean_uri
+            elif uri_lower.startswith('ssr://'):
                 if clean_uri not in unique_map:
                     unique_map[clean_uri] = clean_uri
             else:
+                # 剔除尾部 #备注名 后的核心链接作为去重标识
                 core_id = clean_uri.split('#')[0]
                 if core_id not in unique_map:
                     unique_map[core_id] = clean_uri
         except Exception:
             continue
             
-    logger.info(f"原始数据总量: {len(nodes)}，严格过滤与去重后初步合格节点: {len(unique_map)}")
+    logger.info(f"提取总原始杂乱数据: {len(nodes)}，严格过滤质检后保留极其纯净的节点: {len(unique_map)}")
     return list(unique_map.values())
 
 def main():
-    logger.info(">>> 极速纯净版：代理自动化收集 (含铁血质检 + TCP 并发测活) <<<")
+    logger.info(">>> 极速纯净版：代理自动化全量收集脚本启动 (含铁血级防崩溃质检) <<<")
     repos = read_repositories()
     if not repos:
         return
@@ -291,23 +252,21 @@ def main():
         shutil.rmtree(temp_workspace, ignore_errors=True)
         return
         
-    # 第一步：清洗、格式纠正和防重复
-    formatted_nodes = clean_and_deduplicate(list(raw_nodes))
+    # 清洗和强力去重，执行源头绞杀
+    final_nodes = clean_and_deduplicate(list(raw_nodes))
     
-    # 第二步：多线程并发物理测活
-    final_alive_nodes = filter_alive_nodes(formatted_nodes)
-    
-    # 第三步：Base64 重新封装
-    plain_text_sub = "\n".join(final_alive_nodes)
+    # Base64 重新封装
+    plain_text_sub = "\n".join(final_nodes)
     encoded_sub = base64.b64encode(plain_text_sub.encode('utf-8')).decode('utf-8')
     
     try:
         with open("sub.txt", "w", encoding="utf-8") as f:
             f.write(encoded_sub)
-        logger.info(f">>> 成功将 {len(final_alive_nodes)} 个高纯度且物理连通的节点封装至 sub.txt <<<")
+        logger.info(f">>> 成功将 {len(final_nodes)} 个百分百合格的节点封装至 sub.txt <<<")
     except Exception as e:
         logger.error(f"写入文件失败: {e}")
         
+    # 清理临时文件
     shutil.rmtree(temp_workspace, ignore_errors=True)
 
 if __name__ == "__main__":
