@@ -2,10 +2,13 @@ https://github.com/1211a/CloudflareIP
 https://github.com/3467654709/WorkerVless2sub
 https://github.com/748171997rui-afk/FreeNodes
 https://github.com/Alvin9999-newpac/fanqiang
+https://github.com/Amirrezaheydari81/free-v2ray-for-iran
+https://github.com/AntoninusRothschild/Rock-for-Freedom
 https://github.com/Aris1024/FreeNodes
 https://github.com/Baobei321/-FreeNodes
 https://github.com/Barabama/FreeNodes
 https://github.com/BonXxe1/CloudflareIP
+https://github.com/CB-X2-Jun/Free-v2ray-node
 https://github.com/CRUISER-GC/WorkerVless2sub
 https://github.com/F0rc3Run/F0rc3Run
 https://github.com/FanningHau/.proxy
@@ -23,6 +26,7 @@ https://github.com/Pawdroid/Free-servers
 https://github.com/Rgb0315/WorkerVless2sub
 https://github.com/Seeh-Saah/awesome-free-proxy-list
 https://github.com/Skycnhe/CloudflareIP
+https://github.com/Squi66/Free666
 https://github.com/Vien997/V2ray-Config
 https://github.com/WLget/V2Ray_configs_64
 https://github.com/YaChengMu/Free-Node
@@ -68,6 +72,7 @@ https://github.com/freeclashpro/freeclashpro.github.io
 https://github.com/freeclashssr/freeclashssr.github.io
 https://github.com/freejichang/freejichang.github.io
 https://github.com/freeqv2ray/freeqv2ray.github.io
+https://github.com/freesingbox/freesingbox.github.io
 https://github.com/freessrclash/freessrclash.github.io
 https://github.com/freetopvpn/freetopvpn.github.io
 https://github.com/freev2rayw/freev2rayw.github.io
@@ -81,6 +86,7 @@ https://github.com/gslege/CloudflareIP
 https://github.com/hello-world-1989/cn-news
 https://github.com/helluen/CloudflareIP
 https://github.com/hereVg0/WorkerVless2sub
+https://github.com/hiddify/hiddify-app
 https://github.com/hnztlyh/CloudflareIP
 https://github.com/hofccyf/FreeNodes
 https://github.com/hotsjake/V2Ray_configs_64
@@ -100,6 +106,7 @@ https://github.com/liwp914/BestClash
 https://github.com/love-ztm/FreeNodes
 https://github.com/luochen1975/YaChengMu_Free-Node
 https://github.com/mahdianoosheh/WorkerVless2sub
+https://github.com/maroubao/freewawa
 https://github.com/mheidari98/.proxy
 https://github.com/mike001355/free-nodes
 https://github.com/naravid19/checked-proxies
@@ -108,6 +115,7 @@ https://github.com/nodev2rayclash/nodev2rayclash.github.io
 https://github.com/oahxu/WorkerVless2sub
 https://github.com/peasoft/NoMoreWalls
 https://github.com/pog7x/vpn-configs
+https://github.com/proxifly/free-proxy-list
 https://github.com/qq270895042/WorkerVless2sub
 https://github.com/renzhiai00/FreeNodes
 https://github.com/ripaojiedian/freenode
