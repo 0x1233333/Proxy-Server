@@ -1,5 +1,8 @@
 https://github.com/A-Archives-and-Forks/clash-freenode
 https://github.com/Alanosy/cf-proxy-ex
+https://github.com/Bes-js/public-proxy-list
+https://github.com/Casper-Tech-ke/casper-free-proxies
+https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/Mu-L/mksshare.github.io
 https://github.com/NotNoneX/Proxy-List
@@ -8,6 +11,7 @@ https://github.com/Raad63/Contry-bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/Rm6B/Best_free_news_api
 https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
+https://github.com/Surfboardv2ray/Proxy-sorter
 https://github.com/TOMIBABY/freevpn
 https://github.com/Use4Free/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/VPSLabCloud/VPSLab-Free-Proxy-List
@@ -15,6 +19,9 @@ https://github.com/WLget/V2ray_free
 https://github.com/XigmaDev/proxy
 https://github.com/abshare/abshare.github.io
 https://github.com/anutmagang/Free-HighQuality-Proxy-Socks
+https://github.com/bbylw/freevpn
+https://github.com/bq2015/FreeProxies
+https://github.com/clashdingyue/clashdingyue.github.io
 https://github.com/clashwindow/clashwindow.github.io
 https://github.com/claude89757/free_https_proxies
 https://github.com/cochystars/FreeProxyProxy
@@ -33,6 +40,7 @@ https://github.com/ohkl/airport-free
 https://github.com/ovmvo/FreeSub
 https://github.com/proxygenerator1/ProxyGenerator
 https://github.com/r00tee/Proxy-List
+https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/sinspired/subs-check-pro
 https://github.com/telegeam/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
