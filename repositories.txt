@@ -18,11 +18,13 @@ https://github.com/Jsnzkpg/Jsnzkpg
 https://github.com/Kevin-YST-Du/CloudflareIP
 https://github.com/Leiqtcv/V2Ray_configs_64
 https://github.com/LimitlessTao/WorkerVless2sub
+https://github.com/LuisF-92/Freedom-V2Ray
 https://github.com/Mad-Qj/Free-servers
 https://github.com/MahanKenway/Freedom-V2Ray
 https://github.com/MrMohebi/xray-proxy-grabber-telegram
 https://github.com/Munachukwuw/Best-Free-Proxys
 https://github.com/Pawdroid/Free-servers
+https://github.com/Pxys-io/DailyProxyList
 https://github.com/Rgb0315/WorkerVless2sub
 https://github.com/Seeh-Saah/awesome-free-proxy-list
 https://github.com/Skycnhe/CloudflareIP
@@ -92,6 +94,7 @@ https://github.com/freevpnssr/freevpnssr.github.io
 https://github.com/gavinhomework/free-proxy-list
 https://github.com/gerrinh1005-source/ProxyAtlas
 https://github.com/githubwubian/AutoMergePublicNodes
+https://github.com/gowing520/AutoMergePublicNodes
 https://github.com/gslege/CloudflareIP
 https://github.com/hello-world-1989/cn-news
 https://github.com/helluen/CloudflareIP
@@ -101,6 +104,7 @@ https://github.com/hnztlyh/CloudflareIP
 https://github.com/hofccyf/FreeNodes
 https://github.com/hotsjake/V2Ray_configs_64
 https://github.com/iboxz/free-v2ray-collector
+https://github.com/igareck/vpn-configs-for-russia
 https://github.com/iplocate/free-proxy-list
 https://github.com/ipx2001/WorkerVless2sub
 https://github.com/iswhat/AutoMergePublicNodes
@@ -167,4 +171,5 @@ https://github.com/xiaoye0902/WorkerVless2sub
 https://github.com/xibanyahu/phppachong-freenode
 https://github.com/yeua6321/free
 https://github.com/yizhidahaozi/CloudflareIP
+https://github.com/yutheGreat/Docker-FreeSubsCheck
 https://github.com/zmei19881989/AutoMergePublicNodes

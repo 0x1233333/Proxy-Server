@@ -18,8 +18,10 @@ https://github.com/VPSLabCloud/VPSLab-Free-Proxy-List
 https://github.com/WLget/V2ray_free
 https://github.com/XigmaDev/proxy
 https://github.com/abshare/abshare.github.io
+https://github.com/ajaxfan/abshare.github.io
 https://github.com/anutmagang/Free-HighQuality-Proxy-Socks
 https://github.com/bbylw/freevpn
+https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
 https://github.com/clashdingyue/clashdingyue.github.io
 https://github.com/clashwindow/clashwindow.github.io
@@ -36,6 +38,7 @@ https://github.com/jianming18/freeproxy
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
+https://github.com/myikuns/vpnproxy
 https://github.com/ohkl/airport-free
 https://github.com/ovmvo/FreeSub
 https://github.com/proxygenerator1/ProxyGenerator
