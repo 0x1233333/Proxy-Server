@@ -5,6 +5,7 @@ https://github.com/Alvin9999-newpac/fanqiang
 https://github.com/Amirrezaheydari81/free-v2ray-for-iran
 https://github.com/AntoninusRothschild/Rock-for-Freedom
 https://github.com/Aris1024/FreeNodes
+https://github.com/Au1rxx/free-vpn-subscriptions
 https://github.com/Baobei321/-FreeNodes
 https://github.com/Barabama/FreeNodes
 https://github.com/BonXxe1/CloudflareIP
@@ -12,6 +13,7 @@ https://github.com/CB-X2-Jun/Free-v2ray-node
 https://github.com/CRUISER-GC/WorkerVless2sub
 https://github.com/F0rc3Run/F0rc3Run
 https://github.com/FanningHau/.proxy
+https://github.com/HaiziIzzudin/free-proxy-list
 https://github.com/HakurouKen/free-node
 https://github.com/Huibq/TrojanLinks
 https://github.com/Jsnzkpg/Jsnzkpg
@@ -38,6 +40,7 @@ https://github.com/amirsajjadieh/WorkerVless2sub
 https://github.com/app-vpn/app-vpn.github.io
 https://github.com/awesome-vpn/awesome-vpn
 https://github.com/bbylw/AutoMergePublicNodes
+https://github.com/bbylw/freenode
 https://github.com/bin1site1/V2rayFree
 https://github.com/bjxccloud/WorkerVless2sub
 https://github.com/ccpthisbigdog/freedomchina
@@ -45,7 +48,9 @@ https://github.com/chancat87/awesome-vpn
 https://github.com/chengaopan/AutoMergePublicNodes
 https://github.com/chenjian199609/WorkerVless2sub
 https://github.com/chnbsdan/free
+https://github.com/chromejiasuqi/chromejiasuqi.github.io
 https://github.com/cjuwen/freenode
+https://github.com/clash-jichang/clash-jichang.github.io
 https://github.com/clash-v2ray-free/clash-v2ray-free.github.io
 https://github.com/clashbar/clashbar.github.io
 https://github.com/clashjiasuqi/clashjiasuqi.github.io
@@ -61,6 +66,7 @@ https://github.com/diyros/CloudflareIP
 https://github.com/dogwalkerg/V2Ray_configs_64
 https://github.com/dpangestuw/Free-Proxy
 https://github.com/ebrasha/free-v2ray-public-list
+https://github.com/fanqiang-jichang/fanqiang-jichang.github.io
 https://github.com/fanqiang2025/fanqiang2025.github.io
 https://github.com/fanqiangclash/fanqiangclash.github.io
 https://github.com/fengye0903/FreeNodes
@@ -110,6 +116,7 @@ https://github.com/ipx2001/WorkerVless2sub
 https://github.com/iswhat/AutoMergePublicNodes
 https://github.com/itsanwar/proxy-scraper-ak
 https://github.com/itwhs/WorkerVless2sub
+https://github.com/jiasuqiapp/jiasuqiapp.github.io
 https://github.com/jiedian6666/WorkerVless2sub
 https://github.com/jing5460/Free-servers
 https://github.com/junjun266/FreeProxyGo
@@ -124,7 +131,9 @@ https://github.com/luochen1975/YaChengMu_Free-Node
 https://github.com/mahdianoosheh/WorkerVless2sub
 https://github.com/maroubao/freewawa
 https://github.com/mheidari98/.proxy
+https://github.com/mianfeijiasuqi/mianfeijiasuqi.github.io
 https://github.com/mike001355/free-nodes
+https://github.com/miladtahanian/V2RayCFGTesterPro
 https://github.com/naravid19/checked-proxies
 https://github.com/nodesfree/clashnode
 https://github.com/nodev2rayclash/nodev2rayclash.github.io
@@ -141,6 +150,7 @@ https://github.com/ripaojiedian/freenode
 https://github.com/roosterkid/openproxylist
 https://github.com/rriordan/Proxy-Master
 https://github.com/sclyxcn/v2ray-reaper
+https://github.com/shanghaivpn/shanghaivpn.github.io
 https://github.com/shaoyouvip/free
 https://github.com/shuaidaoya/FreeNodes
 https://github.com/smittycn/WorkerVless2sub
@@ -152,6 +162,8 @@ https://github.com/tonyliubin/am-cf-tunnel-sub
 https://github.com/topclashnode/topclashnode.github.io
 https://github.com/tuijianjiedian/tuijianjiedian.github.io
 https://github.com/turenzu/WorkerVless2sub
+https://github.com/v2rayandroid/v2rayandroid.github.io
+https://github.com/v2raydog/v2raydog.github.io
 https://github.com/v2raynnodes/clashfree
 https://github.com/v2raynnodes/v2rayfree
 https://github.com/vmheaven/VMHeaven-Free-Proxy-Updated
@@ -169,7 +181,9 @@ https://github.com/xiagefei/cm2sub
 https://github.com/xiaoji235/airport-free
 https://github.com/xiaoye0902/WorkerVless2sub
 https://github.com/xibanyahu/phppachong-freenode
+https://github.com/xxooppuu/WorkerVless2sub
 https://github.com/yeua6321/free
 https://github.com/yizhidahaozi/CloudflareIP
 https://github.com/yutheGreat/Docker-FreeSubsCheck
+https://github.com/yzkee/free-proxy-list
 https://github.com/zmei19881989/AutoMergePublicNodes
