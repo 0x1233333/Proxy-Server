@@ -44,13 +44,16 @@ https://github.com/komutan234/Proxy-List-Free
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
+https://github.com/nodesfree/nodesfree.github.io
 https://github.com/ohkl/airport-free
 https://github.com/ovmvo/FreeSub
 https://github.com/proxygenerator1/ProxyGenerator
 https://github.com/r00tee/Proxy-List
 https://github.com/sebastiancgomez/pin-speech-tts-studio
+https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
 https://github.com/telegeam/clashfree
+https://github.com/tglaoshiji/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
 https://github.com/toshare5/toshare5.github.io
 https://github.com/v2raynnodes/clashnode
