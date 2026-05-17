@@ -18,6 +18,7 @@ https://github.com/HaiziIzzudin/free-proxy-list
 https://github.com/HakurouKen/free-node
 https://github.com/Hatefsharifi/V2ray-Config
 https://github.com/Huibq/TrojanLinks
+https://github.com/Ilyacom4ik/free-v2ray-2026
 https://github.com/Jsnzkpg/Jsnzkpg
 https://github.com/Kevin-YST-Du/CloudflareIP
 https://github.com/Leiqtcv/V2Ray_configs_64
@@ -28,6 +29,7 @@ https://github.com/Mad-Qj/Free-servers
 https://github.com/MahanKenway/Freedom-V2Ray
 https://github.com/MrMohebi/xray-proxy-grabber-telegram
 https://github.com/Munachukwuw/Best-Free-Proxys
+https://github.com/Myaooooo/Free-servers
 https://github.com/PENZA84/free-nodes
 https://github.com/PENZA84/v2raynode
 https://github.com/Pawdroid/Free-servers
@@ -41,6 +43,7 @@ https://github.com/Use4Free/.proxy
 https://github.com/Use4Free/VMesslinks
 https://github.com/Vien997/V2ray-Config
 https://github.com/WLget/V2Ray_configs_64
+https://github.com/Wodenas/Free-servers
 https://github.com/YaChengMu/Free-Node
 https://github.com/ZXCV-design/WorkerVless2sub
 https://github.com/alexanderersej/fanqiang
@@ -49,8 +52,10 @@ https://github.com/app-vpn/app-vpn.github.io
 https://github.com/awesome-vpn/awesome-vpn
 https://github.com/bbylw/AutoMergePublicNodes
 https://github.com/bbylw/freenode
+https://github.com/behnamkhodaee-oss/V2ray-Collector
 https://github.com/bin1site1/V2rayFree
 https://github.com/bjxccloud/WorkerVless2sub
+https://github.com/catcat0921/openproxylist
 https://github.com/ccpthisbigdog/freedomchina
 https://github.com/chancat87/awesome-vpn
 https://github.com/chengaopan/AutoMergePublicNodes
@@ -67,6 +72,7 @@ https://github.com/clashonline/clashonline.github.io
 https://github.com/clashv2ray-hub/clashfree
 https://github.com/clashv2ray-hub/v2rayfree
 https://github.com/clashxmeta/clashxmeta.github.io
+https://github.com/clovershell/freenode
 https://github.com/clownpsu/free-clash-v2ray.github.io
 https://github.com/cysk003/AutoMergePublicNodes
 https://github.com/dandan7675/free
@@ -166,10 +172,12 @@ https://github.com/renzhiai00/FreeNodes
 https://github.com/ripaojiedian/freenode
 https://github.com/roosterkid/openproxylist
 https://github.com/rriordan/Proxy-Master
+https://github.com/sangosbanikz/get_subscribe
 https://github.com/sclyxcn/v2ray-reaper
 https://github.com/shanghaivpn/shanghaivpn.github.io
 https://github.com/shaoyouvip/free
 https://github.com/shuaidaoya/FreeNodes
+https://github.com/shubhamshendre/Free-Proxies
 https://github.com/smittycn/WorkerVless2sub
 https://github.com/snakem982/proxypool
 https://github.com/ssrfanqiang/ssrfanqiang.github.io
@@ -186,6 +194,7 @@ https://github.com/v2raydog/v2raydog.github.io
 https://github.com/v2raynnodes/clashfree
 https://github.com/v2raynnodes/v2rayfree
 https://github.com/vmheaven/VMHeaven-Free-Proxy-Updated
+https://github.com/vmheaven/VMHeaven.io-Free-Proxy-List
 https://github.com/vpnclashv2ray/vpnclashv2ray.github.io
 https://github.com/vpneurope/vpneurope.github.io
 https://github.com/vpngood/vpngood.github.io

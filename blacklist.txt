@@ -6,11 +6,14 @@ https://github.com/Chisaning/UNITY2api
 https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/LancelotRar/free-subs
+https://github.com/MrMarble/proxy-list
 https://github.com/Mu-L/mksshare.github.io
 https://github.com/NotNoneX/Proxy-List
 https://github.com/OpenNetCN/clash
 https://github.com/Raad63/Contry-bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/Rm6B/Best_free_news_api
+https://github.com/Saka2e/AzadiHub
+https://github.com/Sibusiso6/proxy-list
 https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
 https://github.com/Surfboardv2ray/Proxy-sorter
@@ -29,6 +32,7 @@ https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
 https://github.com/catcat0921/telegram_socks5_list
 https://github.com/clashdingyue/clashdingyue.github.io
+https://github.com/clashipad/clashipad.github.io
 https://github.com/clashv2ray-hub/clashv2ray-hub.github.io
 https://github.com/clashwindow/clashwindow.github.io
 https://github.com/claude89757/free_https_proxies
@@ -40,9 +44,11 @@ https://github.com/ebrasha/abdal-proxy-hub
 https://github.com/feiniaovpn/--VPN
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
+https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hootie0971/claude-code-via-antigravity
 https://github.com/jianming18/freeproxy
 https://github.com/komutan234/Proxy-List-Free
+https://github.com/latifangren/Free-HighQuality-Proxy-Socks
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
@@ -57,6 +63,7 @@ https://github.com/sinspired/subs-check-pro
 https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
+https://github.com/tomaasz/litellm-free-models-proxy
 https://github.com/toshare5/toshare5.github.io
 https://github.com/v2raynnodes/clashnode
 https://github.com/v2raynnodes/v2rayclash
