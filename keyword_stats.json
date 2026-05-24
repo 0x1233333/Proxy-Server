@@ -1,11 +1,11 @@
 {
     "免费节点": {
-        "tested": 48,
-        "success": 38
+        "tested": 52,
+        "success": 40
     },
     "v2ray free": {
-        "tested": 41,
-        "success": 32
+        "tested": 43,
+        "success": 34
     },
     "clash free": {
         "tested": 20,
@@ -16,19 +16,19 @@
         "success": 36
     },
     "vless trojan 节点": {
-        "tested": 37,
-        "success": 36
+        "tested": 40,
+        "success": 38
     },
     "free proxies": {
-        "tested": 55,
+        "tested": 57,
         "success": 24
     },
     "科学上网 节点": {
-        "tested": 23,
-        "success": 15
+        "tested": 24,
+        "success": 16
     },
     "翻墙 订阅": {
-        "tested": 11,
+        "tested": 12,
         "success": 7
     }
 }

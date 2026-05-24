@@ -5,6 +5,8 @@ https://github.com/Casper-Tech-ke/casper-free-proxies
 https://github.com/Chisaning/UNITY2api
 https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
+https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
+https://github.com/Jametkudasigan/proxy-globe
 https://github.com/LancelotRar/free-subs
 https://github.com/MrMarble/proxy-list
 https://github.com/Mu-L/mksshare.github.io
@@ -18,6 +20,7 @@ https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
 https://github.com/Surfboardv2ray/Proxy-sorter
 https://github.com/TOMIBABY/freevpn
+https://github.com/Tin-fung/freebuff2api-plus
 https://github.com/TopChina/proxy-list
 https://github.com/Use4Free/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/VPSLabCloud/VPSLab-Free-Proxy-List
@@ -37,6 +40,7 @@ https://github.com/clashv2ray-hub/clashv2ray-hub.github.io
 https://github.com/clashwindow/clashwindow.github.io
 https://github.com/claude89757/free_https_proxies
 https://github.com/cochystars/FreeProxyProxy
+https://github.com/crossxx-labs/free-proxy
 https://github.com/databay-labs/free-proxy-list
 https://github.com/david0616042/Interlink-Auto-Bot
 https://github.com/diyeah-create/free
@@ -46,9 +50,11 @@ https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
 https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hootie0971/claude-code-via-antigravity
+https://github.com/hotseo123/shida-jichang-tuijian
 https://github.com/jianming18/freeproxy
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/latifangren/Free-HighQuality-Proxy-Socks
+https://github.com/liangshengyong/LanWan
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
