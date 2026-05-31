@@ -6,6 +6,7 @@ https://github.com/Chisaning/UNITY2api
 https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
+https://github.com/GLSGAMMING/Proxy-Rotator-Suite
 https://github.com/Jametkudasigan/proxy-globe
 https://github.com/LancelotRar/free-subs
 https://github.com/MrMarble/proxy-list
@@ -34,6 +35,7 @@ https://github.com/bbylw/freevpn
 https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
 https://github.com/catcat0921/telegram_socks5_list
+https://github.com/cautonwong/free-proxy-sub
 https://github.com/clashdingyue/clashdingyue.github.io
 https://github.com/clashipad/clashipad.github.io
 https://github.com/clashv2ray-hub/clashv2ray-hub.github.io
@@ -52,6 +54,7 @@ https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hootie0971/claude-code-via-antigravity
 https://github.com/hotseo123/shida-jichang-tuijian
 https://github.com/jianming18/freeproxy
+https://github.com/keeejiii/FlClash
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/latifangren/Free-HighQuality-Proxy-Socks
 https://github.com/liangshengyong/LanWan

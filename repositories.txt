@@ -12,8 +12,10 @@ https://github.com/Barabama/FreeNodes
 https://github.com/BonXxe1/CloudflareIP
 https://github.com/CB-X2-Jun/Free-v2ray-node
 https://github.com/CRUISER-GC/WorkerVless2sub
+https://github.com/Cheagjihvg/simple-proxylist
 https://github.com/F0rc3Run/F0rc3Run
 https://github.com/FanningHau/.proxy
+https://github.com/FreeFolksOn/abc-configs-free-vpn-proxy-list
 https://github.com/HaiziIzzudin/free-proxy-list
 https://github.com/HakurouKen/free-node
 https://github.com/Hatefsharifi/V2ray-Config
@@ -36,6 +38,7 @@ https://github.com/Myaooooo/Free-servers
 https://github.com/PENZA84/free-nodes
 https://github.com/PENZA84/v2raynode
 https://github.com/Pawdroid/Free-servers
+https://github.com/ProxyScrape/free-proxy-list
 https://github.com/Pxys-io/DailyProxyList
 https://github.com/Rgb0315/WorkerVless2sub
 https://github.com/Seeh-Saah/awesome-free-proxy-list
@@ -46,11 +49,13 @@ https://github.com/Use4Free/.proxy
 https://github.com/Use4Free/VMesslinks
 https://github.com/Vien997/V2ray-Config
 https://github.com/WLget/V2Ray_configs_64
+https://github.com/WeixinZhengRec/free
 https://github.com/Wodenas/Free-servers
 https://github.com/YaChengMu/Free-Node
 https://github.com/ZXCV-design/WorkerVless2sub
 https://github.com/alexanderersej/fanqiang
 https://github.com/amirsajjadieh/WorkerVless2sub
+https://github.com/amricangaildivert-bot/Akbargap-v2raysub-FREEDOMPROJECT
 https://github.com/app-vpn/app-vpn.github.io
 https://github.com/awesome-vpn/awesome-vpn
 https://github.com/bbylw/AutoMergePublicNodes
@@ -83,6 +88,7 @@ https://github.com/cysk003/AutoMergePublicNodes
 https://github.com/dandan7675/free
 https://github.com/davidchim/AutoMergePublicNodes
 https://github.com/davidchim/freenode-
+https://github.com/diyeah-create/airport
 https://github.com/diyros/CloudflareIP
 https://github.com/dogwalkerg/V2Ray_configs_64
 https://github.com/dpangestuw/Free-Proxy
@@ -181,6 +187,7 @@ https://github.com/roosterkid/openproxylist
 https://github.com/rriordan/Proxy-Master
 https://github.com/sangosbanikz/get_subscribe
 https://github.com/sclyxcn/v2ray-reaper
+https://github.com/scssw/WorkerVless2sub
 https://github.com/shanghaivpn/shanghaivpn.github.io
 https://github.com/shaoyouvip/free
 https://github.com/shuaidaoya/FreeNodes
@@ -216,6 +223,7 @@ https://github.com/xiagefei/cm2sub
 https://github.com/xiaoji235/airport-free
 https://github.com/xiaoye0902/WorkerVless2sub
 https://github.com/xibanyahu/phppachong-freenode
+https://github.com/xujunc1234/AutoMergePublicNodes
 https://github.com/xxooppuu/WorkerVless2sub
 https://github.com/xyfqzy/free-nodes
 https://github.com/yeua6321/free
