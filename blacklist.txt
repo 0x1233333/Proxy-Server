@@ -4,6 +4,7 @@ https://github.com/Bes-js/public-proxy-list
 https://github.com/Casper-Tech-ke/casper-free-proxies
 https://github.com/Chisaning/UNITY2api
 https://github.com/Ciara-Aa/PROXY-free
+https://github.com/Dongyuan-Lithium/91snipe
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
 https://github.com/GLSGAMMING/Proxy-Rotator-Suite
@@ -29,6 +30,8 @@ https://github.com/WLget/V2ray_free
 https://github.com/XigmaDev/proxy
 https://github.com/abshare/abshare.github.io
 https://github.com/abshare3/abshare3.github.io
+https://github.com/adasd223/anonymous-proxy-list-free
+https://github.com/ahahaabas/anonymous-proxy-list-free
 https://github.com/ajaxfan/abshare.github.io
 https://github.com/anutmagang/Free-HighQuality-Proxy-Socks
 https://github.com/bbylw/freevpn
@@ -78,5 +81,6 @@ https://github.com/v2raynnodes/clashnode
 https://github.com/v2raynnodes/v2rayclash
 https://github.com/vAHiD55555/Free-Proxies
 https://github.com/vAHiD55555/bulk-xray-v2ray-vless-vmess-...-configs
+https://github.com/wazinwazinxd-bot/Proxy-Rotator-Engine
 https://github.com/xCtersReal/V2rayFree
 https://github.com/yemixzy/free-proxy-list
