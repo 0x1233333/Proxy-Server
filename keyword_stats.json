@@ -1,27 +1,27 @@
 {
     "免费节点": {
-        "tested": 57,
-        "success": 45
+        "tested": 62,
+        "success": 49
     },
     "v2ray free": {
-        "tested": 47,
-        "success": 38
+        "tested": 51,
+        "success": 42
     },
     "clash free": {
         "tested": 23,
         "success": 16
     },
     "singbox free": {
-        "tested": 48,
-        "success": 42
+        "tested": 52,
+        "success": 46
     },
     "vless trojan 节点": {
         "tested": 43,
         "success": 41
     },
     "free proxies": {
-        "tested": 63,
-        "success": 26
+        "tested": 64,
+        "success": 27
     },
     "科学上网 节点": {
         "tested": 24,

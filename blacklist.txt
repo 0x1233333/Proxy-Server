@@ -69,6 +69,7 @@ https://github.com/ohkl/airport-free
 https://github.com/ovmvo/FreeSub
 https://github.com/proxygenerator1/ProxyGenerator
 https://github.com/r00tee/Proxy-List
+https://github.com/sdlw7757/Node-Aggregation-Platform
 https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
