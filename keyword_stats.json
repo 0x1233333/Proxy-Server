@@ -1,11 +1,11 @@
 {
     "免费节点": {
-        "tested": 62,
-        "success": 49
+        "tested": 64,
+        "success": 51
     },
     "v2ray free": {
-        "tested": 51,
-        "success": 42
+        "tested": 53,
+        "success": 44
     },
     "clash free": {
         "tested": 23,
@@ -20,8 +20,8 @@
         "success": 41
     },
     "free proxies": {
-        "tested": 64,
-        "success": 27
+        "tested": 66,
+        "success": 28
     },
     "科学上网 节点": {
         "tested": 24,

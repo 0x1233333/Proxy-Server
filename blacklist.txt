@@ -54,6 +54,7 @@ https://github.com/feiniaovpn/--VPN
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
 https://github.com/hendrikbgr/Free-Proxy-Repo
+https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
 https://github.com/hotseo123/shida-jichang-tuijian
 https://github.com/jianming18/freeproxy

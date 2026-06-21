@@ -16,14 +16,17 @@ https://github.com/CRUISER-GC/WorkerVless2sub
 https://github.com/Cheagjihvg/simple-proxylist
 https://github.com/DuChen212/free
 https://github.com/DuChen212/free-subs
+https://github.com/DysektAI/kiro-gateway
 https://github.com/F0rc3Run/F0rc3Run
 https://github.com/FanningHau/.proxy
 https://github.com/FreeFolksOn/abc-configs-free-vpn-proxy-list
+https://github.com/GFardad/Freedom-V2Ray
 https://github.com/HaiziIzzudin/free-proxy-list
 https://github.com/HakurouKen/free-node
 https://github.com/Hatefsharifi/V2ray-Config
 https://github.com/Huibq/TrojanLinks
 https://github.com/Ilyacom4ik/free-v2ray-2026
+https://github.com/JSbio/v2rayfree
 https://github.com/Jeary-Chen/CloudflareIP
 https://github.com/Jsnzkpg/Jsnzkpg
 https://github.com/Kevin-YST-Du/CloudflareIP
@@ -51,6 +54,7 @@ https://github.com/Seeh-Saah/awesome-free-proxy-list
 https://github.com/Skycnhe/CloudflareIP
 https://github.com/Squi66/Free666
 https://github.com/TG-NAV/clashnode
+https://github.com/TheDegenerateDev5150/MegaV_Public
 https://github.com/Use4Free/.proxy
 https://github.com/Use4Free/VMesslinks
 https://github.com/Vadim287/v2ray-configs
@@ -172,6 +176,7 @@ https://github.com/junjun266/FreeProxyGo
 https://github.com/keerzzz/V2Ray_configs_64
 https://github.com/laoxinwu/youxuanWorkerVless2sub
 https://github.com/le45tx1m/Pawdroid
+https://github.com/lem85930/AutoMergePublicNodes
 https://github.com/licheng527/Free-servers
 https://github.com/liuhuo12358/vpn-cdn
 https://github.com/liwp914/BestClash
