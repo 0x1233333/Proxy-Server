@@ -10,6 +10,7 @@ https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
 https://github.com/GLSGAMMING/Proxy-Rotator-Suite
 https://github.com/Jametkudasigan/proxy-globe
 https://github.com/LancelotRar/free-subs
+https://github.com/LengJiaoSupport/FlClash
 https://github.com/MrMarble/proxy-list
 https://github.com/Mu-L/mksshare.github.io
 https://github.com/NotNoneX/Proxy-List
@@ -57,6 +58,7 @@ https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
 https://github.com/hotseo123/shida-jichang-tuijian
+https://github.com/hproxy-com/free-proxy-list
 https://github.com/jianming18/freeproxy
 https://github.com/keeejiii/FlClash
 https://github.com/komutan234/Proxy-List-Free
