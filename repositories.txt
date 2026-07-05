@@ -14,8 +14,11 @@ https://github.com/BonXxe1/CloudflareIP
 https://github.com/CB-X2-Jun/Free-v2ray-node
 https://github.com/CRUISER-GC/WorkerVless2sub
 https://github.com/Cheagjihvg/simple-proxylist
+https://github.com/DuChen212/AutoMergePublicNodes
+https://github.com/DuChen212/Free-servers
 https://github.com/DuChen212/free
 https://github.com/DuChen212/free-subs
+https://github.com/DuChen212/proxypool
 https://github.com/DysektAI/kiro-gateway
 https://github.com/F0rc3Run/F0rc3Run
 https://github.com/FanningHau/.proxy
@@ -26,6 +29,7 @@ https://github.com/HakurouKen/free-node
 https://github.com/Hatefsharifi/V2ray-Config
 https://github.com/Huibq/TrojanLinks
 https://github.com/Ilyacom4ik/free-v2ray-2026
+https://github.com/JHC000abc/ProxyParseForSing-box
 https://github.com/JSbio/v2rayfree
 https://github.com/Jeary-Chen/CloudflareIP
 https://github.com/Jsnzkpg/Jsnzkpg
@@ -37,6 +41,7 @@ https://github.com/Leiqtcv/V2Ray_configs_64
 https://github.com/Leon406/SubCrawler
 https://github.com/LimitlessTao/WorkerVless2sub
 https://github.com/LuisF-92/Freedom-V2Ray
+https://github.com/MS33834/freenode
 https://github.com/Mad-Qj/Free-servers
 https://github.com/MahanKenway/Freedom-V2Ray
 https://github.com/MohammadBahemmat/V2ray-Collector
@@ -110,6 +115,7 @@ https://github.com/diyros/CloudflareIP
 https://github.com/dogwalkerg/V2Ray_configs_64
 https://github.com/dpangestuw/Free-Proxy
 https://github.com/dynamicbeam/WorkerVless2sub
+https://github.com/dzss3399/FreeNodes
 https://github.com/ebrasha/free-v2ray-public-list
 https://github.com/fanninghau/.proxy
 https://github.com/fanqiang-jichang/fanqiang-jichang.github.io
@@ -173,10 +179,13 @@ https://github.com/iswhat/AutoMergePublicNodes
 https://github.com/itsanwar/proxy-scraper-ak
 https://github.com/itwhs/WorkerVless2sub
 https://github.com/jiasuqiapp/jiasuqiapp.github.io
+https://github.com/jichangclash/jichangclash.github.io
+https://github.com/jichangv2ray/jichangv2ray.github.io
 https://github.com/jiedian6666/WorkerVless2sub
 https://github.com/jing5460/Free-servers
 https://github.com/junjun266/FreeProxyGo
 https://github.com/keerzzz/V2Ray_configs_64
+https://github.com/kmyinrui/Scrape-By-Country
 https://github.com/kooker/FreeSubsCheck
 https://github.com/laoxinwu/youxuanWorkerVless2sub
 https://github.com/le45tx1m/Pawdroid
@@ -233,10 +242,13 @@ https://github.com/tglaoshiji/nodeshare
 https://github.com/tonyliubin/am-cf-tunnel-sub
 https://github.com/top-v2ray/top-v2ray.github.io
 https://github.com/topclashnode/topclashnode.github.io
+https://github.com/topvpntuijian/topvpntuijian.github.io
 https://github.com/tuijianjiedian/tuijianjiedian.github.io
 https://github.com/turenzu/WorkerVless2sub
+https://github.com/v2ray-clash-ssr/v2ray-clash-ssr.github.io
 https://github.com/v2rayandroid/v2rayandroid.github.io
 https://github.com/v2raydog/v2raydog.github.io
+https://github.com/v2rayjiedian/v2rayjiedian.github.io
 https://github.com/v2raynnodes/clashfree
 https://github.com/v2raynnodes/v2rayfree
 https://github.com/vmheaven/VMHeaven-Free-Proxy-Updated

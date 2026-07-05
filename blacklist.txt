@@ -29,6 +29,7 @@ https://github.com/Use4Free/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/VPSLabCloud/VPSLab-Free-Proxy-List
 https://github.com/WLget/V2ray_free
 https://github.com/XigmaDev/proxy
+https://github.com/Yagami200/free-mtproto-proxies
 https://github.com/abshare/abshare.github.io
 https://github.com/abshare3/abshare3.github.io
 https://github.com/adasd223/anonymous-proxy-list-free
@@ -69,6 +70,7 @@ https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
 https://github.com/nodesfree/nodesfree.github.io
 https://github.com/ohkl/airport-free
+https://github.com/opassoca/free-antigravity
 https://github.com/ovmvo/FreeSub
 https://github.com/proxygenerator1/ProxyGenerator
 https://github.com/r00tee/Proxy-List
