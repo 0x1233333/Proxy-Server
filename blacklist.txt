@@ -48,6 +48,7 @@ https://github.com/clashwindow/clashwindow.github.io
 https://github.com/claude89757/free_https_proxies
 https://github.com/cochystars/FreeProxyProxy
 https://github.com/crossxx-labs/free-proxy
+https://github.com/cyberh4ck3r/free-proxy-list
 https://github.com/databay-labs/free-proxy-list
 https://github.com/david0616042/Interlink-Auto-Bot
 https://github.com/diyeah-create/free
@@ -55,6 +56,7 @@ https://github.com/ebrasha/abdal-proxy-hub
 https://github.com/feiniaovpn/--VPN
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
+https://github.com/gilsonfelix1/Interlink-Airdrop-Automator
 https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
@@ -68,6 +70,7 @@ https://github.com/liangshengyong/LanWan
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
+https://github.com/nazo-no-llm-ojisan/gekiyasuLLM
 https://github.com/nodesfree/nodesfree.github.io
 https://github.com/ohkl/airport-free
 https://github.com/opassoca/free-antigravity
