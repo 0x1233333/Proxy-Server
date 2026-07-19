@@ -3,6 +3,7 @@ https://github.com/Alanosy/cf-proxy-ex
 https://github.com/Bes-js/public-proxy-list
 https://github.com/Casper-Tech-ke/casper-free-proxies
 https://github.com/Chisaning/UNITY2api
+https://github.com/Ciara-12/PROXY-free
 https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Dongyuan-Lithium/91snipe
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
@@ -67,6 +68,7 @@ https://github.com/keeejiii/FlClash
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/latifangren/Free-HighQuality-Proxy-Socks
 https://github.com/liangshengyong/LanWan
+https://github.com/mehdirzfx/v2ray-sub
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/myikuns/vpnproxy
