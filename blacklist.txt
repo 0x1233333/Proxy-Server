@@ -83,11 +83,13 @@ https://github.com/sdlw7757/Node-Aggregation-Platform
 https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
+https://github.com/sunmiao4458/free-proxy-airport
 https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
 https://github.com/tomaasz/litellm-free-models-proxy
 https://github.com/toshare5/toshare5.github.io
+https://github.com/tullextraterrestrial3175/ClaudeCode-Model-Rotator
 https://github.com/v2raynnodes/clashnode
 https://github.com/v2raynnodes/v2rayclash
 https://github.com/vAHiD55555/Free-Proxies

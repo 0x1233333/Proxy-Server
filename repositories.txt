@@ -13,7 +13,9 @@ https://github.com/Barabama/FreeNodes
 https://github.com/BonXxe1/CloudflareIP
 https://github.com/CB-X2-Jun/Free-v2ray-node
 https://github.com/CRUISER-GC/WorkerVless2sub
+https://github.com/CelestialBrain/worldpool
 https://github.com/Cheagjihvg/simple-proxylist
+https://github.com/Cuarentas/free-proxy-list
 https://github.com/DuChen212/AutoMergePublicNodes
 https://github.com/DuChen212/Free-servers
 https://github.com/DuChen212/free
@@ -77,6 +79,7 @@ https://github.com/WeixinZhengRec/free
 https://github.com/Wodenas/Free-servers
 https://github.com/YaChengMu/Free-Node
 https://github.com/ZXCV-design/WorkerVless2sub
+https://github.com/Zoxine/v2
 https://github.com/aiyinsitan-art/Free-servers
 https://github.com/alexanderersej/fanqiang
 https://github.com/amirsajjadieh/WorkerVless2sub
@@ -226,6 +229,7 @@ https://github.com/outlinenode/outlinenode.github.io
 https://github.com/passgreatwall/passgreatwall.github.io
 https://github.com/pcjiasuqi/pcjiasuqi.github.io
 https://github.com/peasoft/NoMoreWalls
+https://github.com/persianata/crow-v2ray
 https://github.com/pog7x/vpn-configs
 https://github.com/poommin2543/v2ray-configsNew
 https://github.com/prhom-jpg/SubCrawler
@@ -245,6 +249,7 @@ https://github.com/sclyxcn/v2ray-reaper
 https://github.com/scssw/WorkerVless2sub
 https://github.com/shanghaivpn/shanghaivpn.github.io
 https://github.com/shaoyouvip/free
+https://github.com/shtrend/Workersync
 https://github.com/shuaidaoya/FreeNodes
 https://github.com/shubhamshendre/Free-Proxies
 https://github.com/smittycn/WorkerVless2sub

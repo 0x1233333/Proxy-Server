@@ -4,11 +4,11 @@
         "success": 64
     },
     "v2ray free": {
-        "tested": 61,
-        "success": 52
+        "tested": 64,
+        "success": 55
     },
     "clash free": {
-        "tested": 28,
+        "tested": 29,
         "success": 20
     },
     "singbox free": {
@@ -16,12 +16,12 @@
         "success": 47
     },
     "vless trojan 节点": {
-        "tested": 45,
-        "success": 43
+        "tested": 46,
+        "success": 44
     },
     "free proxies": {
-        "tested": 76,
-        "success": 31
+        "tested": 78,
+        "success": 32
     },
     "科学上网 节点": {
         "tested": 29,
