@@ -16,6 +16,7 @@ https://github.com/MrMarble/proxy-list
 https://github.com/Mu-L/mksshare.github.io
 https://github.com/NotNoneX/Proxy-List
 https://github.com/OpenNetCN/clash
+https://github.com/ProxyScraper/ProxyScraper
 https://github.com/Raad63/Contry-bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/Rm6B/Best_free_news_api
 https://github.com/Saka2e/AzadiHub
@@ -42,6 +43,7 @@ https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
 https://github.com/catcat0921/telegram_socks5_list
 https://github.com/cautonwong/free-proxy-sub
+https://github.com/chen08209/FlClash
 https://github.com/clashdingyue/clashdingyue.github.io
 https://github.com/clashipad/clashipad.github.io
 https://github.com/clashv2ray-hub/clashv2ray-hub.github.io
@@ -58,6 +60,7 @@ https://github.com/feiniaovpn/--VPN
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
 https://github.com/gilsonfelix1/Interlink-Airdrop-Automator
+https://github.com/gnxD3RfTT2WE/mass-http-proxy-list
 https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
@@ -96,4 +99,5 @@ https://github.com/vAHiD55555/Free-Proxies
 https://github.com/vAHiD55555/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/wazinwazinxd-bot/Proxy-Rotator-Engine
 https://github.com/xCtersReal/V2rayFree
+https://github.com/xyzs996/free-proxy-health-list
 https://github.com/yemixzy/free-proxy-list

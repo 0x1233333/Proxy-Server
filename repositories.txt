@@ -2,6 +2,7 @@ https://github.com/0xRadikal/Free-v2ray-Configs
 https://github.com/1211a/CloudflareIP
 https://github.com/3467654709/WorkerVless2sub
 https://github.com/748171997rui-afk/FreeNodes
+https://github.com/748171997rui-afk/airport
 https://github.com/Alvin9999-newpac/fanqiang
 https://github.com/Amirrezaheydari81/free-v2ray-for-iran
 https://github.com/AntoninusRothschild/Rock-for-Freedom
@@ -204,6 +205,7 @@ https://github.com/kooker/FreeSubsCheck
 https://github.com/laoxinwu/youxuanWorkerVless2sub
 https://github.com/le45tx1m/Pawdroid
 https://github.com/lem85930/AutoMergePublicNodes
+https://github.com/lhb6666-harvey/Cloudflare-proxy-
 https://github.com/licheng527/Free-servers
 https://github.com/liuhuo12358/vpn-cdn
 https://github.com/liwp914/BestClash
@@ -214,6 +216,7 @@ https://github.com/mahdianoosheh/WorkerVless2sub
 https://github.com/maroubao/freewawa
 https://github.com/mauricegift/free-proxies
 https://github.com/mheidari98/.proxy
+https://github.com/mhmdxahmd/mafly
 https://github.com/mianfeijiasuqi/mianfeijiasuqi.github.io
 https://github.com/mike001355/free-nodes
 https://github.com/miladtahanian/V2RayCFGTesterPro
@@ -306,5 +309,6 @@ https://github.com/yeua6321/free
 https://github.com/yizhidahaozi/CloudflareIP
 https://github.com/yutheGreat/Docker-FreeSubsCheck
 https://github.com/yzkee/free-proxy-list
+https://github.com/ziyou2075/WorkerVless2sub
 https://github.com/zmei19881989/AutoMergePublicNodes
 https://github.com/zyj68/SubCrawler
