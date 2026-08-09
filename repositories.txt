@@ -53,6 +53,7 @@ https://github.com/LuisF-92/Freedom-V2Ray
 https://github.com/MS33834/freenode
 https://github.com/Mad-Qj/Free-servers
 https://github.com/MahanKenway/Freedom-V2Ray
+https://github.com/MarshallEriksen-Neura/WorkerVless2sub
 https://github.com/MohammadBahemmat/V2ray-Collector
 https://github.com/MrMohebi/xray-proxy-grabber-telegram
 https://github.com/Munachukwuw/Best-Free-Proxys
@@ -97,6 +98,7 @@ https://github.com/catcat0921/openproxylist
 https://github.com/cbusifabcap/daily_free_vpn
 https://github.com/ccpthisbigdog/freedomchina
 https://github.com/chancat87/awesome-vpn
+https://github.com/changsongyang/free-proxy-list
 https://github.com/cheapclash/cheapclash.github.io
 https://github.com/chenTest2019/WorkerVless2sub
 https://github.com/chengaopan/AutoMergePublicNodes
@@ -119,6 +121,7 @@ https://github.com/clashxmeta/clashxmeta.github.io
 https://github.com/clovershell/freenode
 https://github.com/clownpsu/free-clash-v2ray.github.io
 https://github.com/cysk003/AutoMergePublicNodes
+https://github.com/cysk003/Epodonios-v2ray-configs
 https://github.com/dandan7675/free
 https://github.com/davidchim/AutoMergePublicNodes
 https://github.com/davidchim/freenode-
@@ -232,11 +235,13 @@ https://github.com/outlinenode/outlinenode.github.io
 https://github.com/passgreatwall/passgreatwall.github.io
 https://github.com/pcjiasuqi/pcjiasuqi.github.io
 https://github.com/peasoft/NoMoreWalls
+https://github.com/penhandev/AutoAiVPN
 https://github.com/persianata/crow-v2ray
 https://github.com/pog7x/vpn-configs
 https://github.com/poommin2543/v2ray-configsNew
 https://github.com/prhom-jpg/SubCrawler
 https://github.com/proxifly/free-proxy-list
+https://github.com/proxmint/free-proxy-list
 https://github.com/proxyfree/proxyfree.github.io
 https://github.com/q13467982/free
 https://github.com/qingsheng-git/kiro-gateway
@@ -247,6 +252,7 @@ https://github.com/rickicode/free-proxy-singbox
 https://github.com/ripaojiedian/freenode
 https://github.com/roosterkid/openproxylist
 https://github.com/rriordan/Proxy-Master
+https://github.com/samling-jackyjyo/AutoMergePublicNodes
 https://github.com/sangosbanikz/get_subscribe
 https://github.com/sclyxcn/v2ray-reaper
 https://github.com/scssw/WorkerVless2sub
@@ -308,6 +314,7 @@ https://github.com/yanzhang4013/AutoMergePublicNodes
 https://github.com/yeua6321/free
 https://github.com/yizhidahaozi/CloudflareIP
 https://github.com/yutheGreat/Docker-FreeSubsCheck
+https://github.com/yuzengbaocy/AutoMergePublicNodes
 https://github.com/yzkee/free-proxy-list
 https://github.com/ziyou2075/WorkerVless2sub
 https://github.com/zmei19881989/AutoMergePublicNodes
