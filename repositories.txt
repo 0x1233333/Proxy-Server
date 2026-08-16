@@ -5,6 +5,7 @@ https://github.com/748171997rui-afk/FreeNodes
 https://github.com/748171997rui-afk/airport
 https://github.com/Alvin9999-newpac/fanqiang
 https://github.com/Amirrezaheydari81/free-v2ray-for-iran
+https://github.com/Andyworldclub/openproxylist
 https://github.com/AntoninusRothschild/Rock-for-Freedom
 https://github.com/Aris1024/FreeNodes
 https://github.com/Au1rxx/free-vpn-subscriptions
@@ -89,6 +90,7 @@ https://github.com/amricangaildivert-bot/Akbargap-v2raysub-FREEDOMPROJECT
 https://github.com/app-vpn/app-vpn.github.io
 https://github.com/aviamastersgh/vpn-free-russia
 https://github.com/awesome-vpn/awesome-vpn
+https://github.com/azestkingscrown/Free_Proxy_List
 https://github.com/bbylw/AutoMergePublicNodes
 https://github.com/bbylw/freenode
 https://github.com/behnamkhodaee-oss/V2ray-Collector
@@ -117,14 +119,17 @@ https://github.com/clashnodev2ray/clashnodev2ray.github.io
 https://github.com/clashonline/clashonline.github.io
 https://github.com/clashv2ray-hub/clashfree
 https://github.com/clashv2ray-hub/v2rayfree
+https://github.com/clashv2rayu/clashv2rayu.github.io
 https://github.com/clashxmeta/clashxmeta.github.io
 https://github.com/clovershell/freenode
 https://github.com/clownpsu/free-clash-v2ray.github.io
+https://github.com/crackbest/V2ray-Config
 https://github.com/cysk003/AutoMergePublicNodes
 https://github.com/cysk003/Epodonios-v2ray-configs
 https://github.com/dandan7675/free
 https://github.com/davidchim/AutoMergePublicNodes
 https://github.com/davidchim/freenode-
+https://github.com/davidchim/proxypool
 https://github.com/diyeah-create/airport
 https://github.com/diyros/CloudflareIP
 https://github.com/dogwalkerg/V2Ray_configs_64
@@ -132,6 +137,7 @@ https://github.com/dpangestuw/Free-Proxy
 https://github.com/dynamicbeam/WorkerVless2sub
 https://github.com/dzss3399/FreeNodes
 https://github.com/ebrasha/free-v2ray-public-list
+https://github.com/ez-coder-admin/v2ray-config
 https://github.com/fanninghau/.proxy
 https://github.com/fanqiang-jichang/fanqiang-jichang.github.io
 https://github.com/fanqiang2025/fanqiang2025.github.io
@@ -171,6 +177,7 @@ https://github.com/freevpnlist/freevpnlist.github.io
 https://github.com/freevpnshare/freevpnshare.github.io
 https://github.com/freevpnssr/freevpnssr.github.io
 https://github.com/freevpntuijian/freevpntuijian.github.io
+https://github.com/furyteamtop/fury-antidetect-browser
 https://github.com/g-star1024/free
 https://github.com/gavinhomework/free-proxy-list
 https://github.com/gerrinh1005-source/ProxyAtlas
@@ -191,6 +198,7 @@ https://github.com/hotsjake/V2Ray_configs_64
 https://github.com/iboxz/free-v2ray-collector
 https://github.com/igareck/vpn-configs-for-russia
 https://github.com/iplocate/free-proxy-list
+https://github.com/ipx2001/AutoMergePublicNodes
 https://github.com/ipx2001/WorkerVless2sub
 https://github.com/ishalumi/proxy-node-collector
 https://github.com/iswhat/AutoMergePublicNodes

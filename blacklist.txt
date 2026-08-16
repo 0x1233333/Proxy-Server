@@ -26,6 +26,7 @@ https://github.com/Sibusiso6/proxy-list
 https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
 https://github.com/Surfboardv2ray/Proxy-sorter
+https://github.com/TG-NAV/nodeshare
 https://github.com/TOMIBABY/freevpn
 https://github.com/Tin-fung/freebuff2api-plus
 https://github.com/TopChina/proxy-list
@@ -62,6 +63,7 @@ https://github.com/feiniaovpn/--VPN
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
 https://github.com/gilsonfelix1/Interlink-Airdrop-Automator
+https://github.com/gnxD3RfTT2WE/http-proxy-list-2026
 https://github.com/gnxD3RfTT2WE/mass-http-proxy-list
 https://github.com/gproxynet/free-proxy-list
 https://github.com/hendrikbgr/Free-Proxy-Repo
