@@ -123,6 +123,7 @@ https://github.com/clashv2rayu/clashv2rayu.github.io
 https://github.com/clashxmeta/clashxmeta.github.io
 https://github.com/clovershell/freenode
 https://github.com/clownpsu/free-clash-v2ray.github.io
+https://github.com/comanche2008/AutoMergePublicNodes
 https://github.com/crackbest/V2ray-Config
 https://github.com/cysk003/AutoMergePublicNodes
 https://github.com/cysk003/Epodonios-v2ray-configs
@@ -158,6 +159,7 @@ https://github.com/free-v2ray-clash/free-v2ray-clash.github.io
 https://github.com/free-v2raynode/free-v2raynode.github.io
 https://github.com/free-v2rayx/free-v2rayx.github.io
 https://github.com/free18/v2ray
+https://github.com/free8849/free8849
 https://github.com/freeclashpro/freeclashpro.github.io
 https://github.com/freeclashssr/freeclashssr.github.io
 https://github.com/freedom8849/freedompages
@@ -255,6 +257,7 @@ https://github.com/q13467982/free
 https://github.com/qingsheng-git/kiro-gateway
 https://github.com/qq270895042/WorkerVless2sub
 https://github.com/quangdang46/openproxy
+https://github.com/ramin00542/Free-v2ray-Configs
 https://github.com/renzhiai00/FreeNodes
 https://github.com/rickicode/free-proxy-singbox
 https://github.com/ripaojiedian/freenode

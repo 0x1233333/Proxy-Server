@@ -10,6 +10,7 @@ https://github.com/Dongyuan-Lithium/91snipe
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
 https://github.com/GLSGAMMING/Proxy-Rotator-Suite
+https://github.com/Ian-Lusule/Proxies
 https://github.com/Jametkudasigan/proxy-globe
 https://github.com/LancelotRar/free-subs
 https://github.com/LengJiaoSupport/FlClash
@@ -76,6 +77,7 @@ https://github.com/keeejiii/FlClash
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/latifangren/Free-HighQuality-Proxy-Socks
 https://github.com/liangshengyong/LanWan
+https://github.com/maech01/free-proxy-airport
 https://github.com/mehdirzfx/v2ray-sub
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
