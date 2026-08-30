@@ -67,6 +67,7 @@ https://github.com/gilsonfelix1/Interlink-Airdrop-Automator
 https://github.com/gnxD3RfTT2WE/http-proxy-list-2026
 https://github.com/gnxD3RfTT2WE/mass-http-proxy-list
 https://github.com/gproxynet/free-proxy-list
+https://github.com/gxyandy/FreeProxiesSubscribeForClash
 https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
@@ -92,6 +93,7 @@ https://github.com/r00tee/Proxy-List
 https://github.com/relayglass/free-proxy-list
 https://github.com/sdlw7757/Node-Aggregation-Platform
 https://github.com/sebastiancgomez/pin-speech-tts-studio
+https://github.com/share-daily/node
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
 https://github.com/sunmiao4458/free-proxy-airport
