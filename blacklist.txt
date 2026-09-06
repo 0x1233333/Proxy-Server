@@ -88,6 +88,7 @@ https://github.com/nodesfree/nodesfree.github.io
 https://github.com/ohkl/airport-free
 https://github.com/opassoca/free-antigravity
 https://github.com/ovmvo/FreeSub
+https://github.com/proxio-io/proxy-list
 https://github.com/proxygenerator1/ProxyGenerator
 https://github.com/r00tee/Proxy-List
 https://github.com/relayglass/free-proxy-list
@@ -101,6 +102,7 @@ https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
 https://github.com/tomaasz/litellm-free-models-proxy
+https://github.com/toml66l/fanqiang
 https://github.com/toshare5/toshare5.github.io
 https://github.com/tullextraterrestrial3175/ClaudeCode-Model-Rotator
 https://github.com/v2raynnodes/clashnode
