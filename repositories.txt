@@ -68,6 +68,7 @@ https://github.com/PENZA84/free-nodes
 https://github.com/PENZA84/free-v2ray-2026
 https://github.com/PENZA84/v2raynode
 https://github.com/Pawdroid/Free-servers
+https://github.com/ProblemTheCode/SylphNet-public
 https://github.com/ProxyScrape/free-proxy-list
 https://github.com/Pxys-io/DailyProxyList
 https://github.com/Raad63/v2ray-configs-sub-5
@@ -205,6 +206,7 @@ https://github.com/hnztlyh/CloudflareIP
 https://github.com/hofccyf/FreeNodes
 https://github.com/hongkongclash/hongkongclash.github.io
 https://github.com/hotsjake/V2Ray_configs_64
+https://github.com/hua9898998/mycookie
 https://github.com/iboxz/free-v2ray-collector
 https://github.com/igareck/vpn-configs-for-russia
 https://github.com/iplocate/free-proxy-list
@@ -335,6 +337,7 @@ https://github.com/wuhanvpn/wuhanvpn.github.io
 https://github.com/xiagefei/cm2sub
 https://github.com/xiao-fanfan/clashfree
 https://github.com/xiaoji235/airport-free
+https://github.com/xiaolaodi0719/FreeProxyHub
 https://github.com/xiaoye0902/WorkerVless2sub
 https://github.com/xiaoyuyu6420/FlClash
 https://github.com/xibanyahu/phppachong-freenode
@@ -347,6 +350,7 @@ https://github.com/yizhidahaozi/CloudflareIP
 https://github.com/yutheGreat/Docker-FreeSubsCheck
 https://github.com/yuzengbaocy/AutoMergePublicNodes
 https://github.com/yzkee/free-proxy-list
+https://github.com/zhuhaiuk/free-nodes
 https://github.com/ziyou2075/WorkerVless2sub
 https://github.com/zmei19881989/AutoMergePublicNodes
 https://github.com/zyj68/SubCrawler

@@ -1,23 +1,23 @@
 {
     "免费节点": {
-        "tested": 87,
-        "success": 74
+        "tested": 88,
+        "success": 75
     },
     "v2ray free": {
-        "tested": 74,
-        "success": 64
+        "tested": 75,
+        "success": 65
     },
     "clash free": {
-        "tested": 35,
-        "success": 23
+        "tested": 37,
+        "success": 24
     },
     "singbox free": {
         "tested": 55,
         "success": 48
     },
     "vless trojan 节点": {
-        "tested": 52,
-        "success": 49
+        "tested": 55,
+        "success": 50
     },
     "free proxies": {
         "tested": 91,
