@@ -6,6 +6,7 @@ https://github.com/Aminul-Islam7/rds4plus
 https://github.com/Bes-js/public-proxy-list
 https://github.com/Casper-Tech-ke/casper-free-proxies
 https://github.com/Chisaning/UNITY2api
+https://github.com/Chrissycompleted610/CivitaiFreeTool
 https://github.com/Ciara-12/PROXY-free
 https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Dongyuan-Lithium/91snipe
@@ -60,9 +61,11 @@ https://github.com/crossxx-labs/free-proxy
 https://github.com/cyberh4ck3r/free-proxy-list
 https://github.com/databay-labs/free-proxy-list
 https://github.com/david0616042/Interlink-Auto-Bot
+https://github.com/deezertidal/freevpn
 https://github.com/diyeah-create/free
 https://github.com/ebrasha/abdal-proxy-hub
 https://github.com/feiniaovpn/--VPN
+https://github.com/fleyderrivera/payday-2-free-cheat-heist-toolkit
 https://github.com/freenodess/freenode
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
