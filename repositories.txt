@@ -55,6 +55,7 @@ https://github.com/Leiqtcv/V2Ray_configs_64
 https://github.com/Leon406/SubCrawler
 https://github.com/LimitlessTao/WorkerVless2sub
 https://github.com/LuisF-92/Freedom-V2Ray
+https://github.com/MAM-07-98/V2ray-Collector
 https://github.com/MS33834/freenode
 https://github.com/Mad-Qj/Free-servers
 https://github.com/MahanKenway/Freedom-V2Ray
@@ -137,6 +138,7 @@ https://github.com/clashv2ray-hub/v2rayfree
 https://github.com/clashv2rayu/clashv2rayu.github.io
 https://github.com/clashxfree/clashxfree.github.io
 https://github.com/clashxmeta/clashxmeta.github.io
+https://github.com/clcssg/V2Ray_configs_64
 https://github.com/clovershell/freenode
 https://github.com/clownpsu/free-clash-v2ray.github.io
 https://github.com/comanche2008/AutoMergePublicNodes
@@ -218,6 +220,7 @@ https://github.com/hofccyf/FreeNodes
 https://github.com/hongkongclash/hongkongclash.github.io
 https://github.com/hotsjake/V2Ray_configs_64
 https://github.com/hua9898998/mycookie
+https://github.com/huoji-111/WorkerVless2sub
 https://github.com/iboxz/free-v2ray-collector
 https://github.com/igareck/vpn-configs-for-russia
 https://github.com/indiavpn/indiavpn.github.io
@@ -238,6 +241,7 @@ https://github.com/jiedianmianfei/jiedianmianfei.github.io
 https://github.com/jing5460/Free-servers
 https://github.com/junjun266/FreeProxyGo
 https://github.com/keerzzz/V2Ray_configs_64
+https://github.com/kejixiaoqi666/xboard-node-rust
 https://github.com/kmyinrui/Scrape-By-Country
 https://github.com/kooker/FreeSubsCheck
 https://github.com/kort0881/vpn-vless-configs-russia
@@ -264,6 +268,7 @@ https://github.com/miladtahanian/V2RayCFGTesterPro
 https://github.com/mmpx12/proxy-list
 https://github.com/mohsenbaqerii1990-spec/V2ray-Config
 https://github.com/monosans/proxy-list
+https://github.com/moqianbing/Free-Nodes
 https://github.com/mrjxyz/Cloudflare_vless_trojan
 https://github.com/mth2538/Cloudflare_vless_trojan
 https://github.com/muxd93/awesome-vpn
@@ -313,6 +318,7 @@ https://github.com/snakem982/proxypool
 https://github.com/snowman-kai/AutoMergePublicNodes
 https://github.com/souvpn/souvpn.github.io
 https://github.com/ssrfanqiang/ssrfanqiang.github.io
+https://github.com/svinakraft-maker/FlareFeed
 https://github.com/tammader/freesub
 https://github.com/taokun5881/FreeNodes
 https://github.com/telegeam/freenode

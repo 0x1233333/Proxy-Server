@@ -2,6 +2,7 @@ https://github.com/1000ttank/free-vpn-clash-aggregator
 https://github.com/6yyn/free-proxy-list
 https://github.com/A-Archives-and-Forks/clash-freenode
 https://github.com/Alanosy/cf-proxy-ex
+https://github.com/AllenAnderson216/am-cf-tunnel
 https://github.com/Aminul-Islam7/rds4plus
 https://github.com/Bes-js/public-proxy-list
 https://github.com/Casper-Tech-ke/casper-free-proxies
@@ -37,6 +38,7 @@ https://github.com/TopChina/proxy-list
 https://github.com/Use4Free/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/VPSLabCloud/VPSLab-Free-Proxy-List
 https://github.com/WLget/V2ray_free
+https://github.com/WilliamQXZ/free-nodes-sr
 https://github.com/XigmaDev/proxy
 https://github.com/Yagami200/free-mtproto-proxies
 https://github.com/abshare/abshare.github.io
@@ -45,6 +47,7 @@ https://github.com/adasd223/anonymous-proxy-list-free
 https://github.com/ahahaabas/anonymous-proxy-list-free
 https://github.com/ajaxfan/abshare.github.io
 https://github.com/anutmagang/Free-HighQuality-Proxy-Socks
+https://github.com/aviamastersgh/mtproto-free-russia
 https://github.com/bbylw/freevpn
 https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
@@ -69,9 +72,11 @@ https://github.com/fleyderrivera/payday-2-free-cheat-heist-toolkit
 https://github.com/freenodess/freenode
 https://github.com/fuqi-zeng/free
 https://github.com/g-hunter-g/awesome-vpn
+https://github.com/giantlucy/latest_jichang
 https://github.com/gilsonfelix1/Interlink-Airdrop-Automator
 https://github.com/gnxD3RfTT2WE/http-proxy-list-2026
 https://github.com/gnxD3RfTT2WE/mass-http-proxy-list
+https://github.com/gos108/proxy
 https://github.com/gproxynet/free-proxy-list
 https://github.com/gxyandy/FreeProxiesSubscribeForClash
 https://github.com/hendrikbgr/Free-Proxy-Repo
@@ -112,6 +117,7 @@ https://github.com/tglaoshiji/clashfree
 https://github.com/tolinkshare2/tolinkshare2.github.io
 https://github.com/tomaasz/litellm-free-models-proxy
 https://github.com/toml66l/fanqiang
+https://github.com/topgamer332/Zeno-Clash-Full-Version-Unlocked
 https://github.com/toshare5/toshare5.github.io
 https://github.com/tullextraterrestrial3175/ClaudeCode-Model-Rotator
 https://github.com/txqb2026/cf-workers_amclubs
@@ -120,6 +126,7 @@ https://github.com/v2raynnodes/v2rayclash
 https://github.com/vAHiD55555/Free-Proxies
 https://github.com/vAHiD55555/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/wazinwazinxd-bot/Proxy-Rotator-Engine
+https://github.com/widesheep62/Zeno-Clash-Full-Version
 https://github.com/xCtersReal/V2rayFree
 https://github.com/xyzs996/free-proxy-health-list
 https://github.com/yemixzy/free-proxy-list
