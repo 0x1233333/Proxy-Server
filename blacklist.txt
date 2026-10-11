@@ -13,6 +13,7 @@ https://github.com/Ciara-Aa/PROXY-free
 https://github.com/Dongyuan-Lithium/91snipe
 https://github.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs
 https://github.com/FairyWorld/fq_free-ssr-ss-v2ray-vpn-clash
+https://github.com/FreeVPNHub/clashfree
 https://github.com/GLSGAMMING/Proxy-Rotator-Suite
 https://github.com/Ian-Lusule/Proxies
 https://github.com/Jametkudasigan/proxy-globe
@@ -30,6 +31,7 @@ https://github.com/Saka2e/AzadiHub
 https://github.com/Sibusiso6/proxy-list
 https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
+https://github.com/StrangeSid/yetanotherproxy-gh
 https://github.com/Surfboardv2ray/Proxy-sorter
 https://github.com/TG-NAV/nodeshare
 https://github.com/TOMIBABY/freevpn
@@ -84,6 +86,7 @@ https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
 https://github.com/hotseo123/shida-jichang-tuijian
 https://github.com/hproxy-com/free-proxy-list
+https://github.com/hzexe/zen-free-proxy-updates
 https://github.com/jianming18/freeproxy
 https://github.com/jichangtuijian-cheap/cheap-airports
 https://github.com/keeejiii/FlClash

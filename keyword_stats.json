@@ -1,15 +1,15 @@
 {
     "免费节点": {
-        "tested": 96,
-        "success": 82
+        "tested": 97,
+        "success": 83
     },
     "v2ray free": {
-        "tested": 81,
-        "success": 69
+        "tested": 82,
+        "success": 70
     },
     "clash free": {
-        "tested": 45,
-        "success": 27
+        "tested": 47,
+        "success": 29
     },
     "singbox free": {
         "tested": 58,
@@ -20,7 +20,7 @@
         "success": 58
     },
     "free proxies": {
-        "tested": 97,
+        "tested": 99,
         "success": 40
     },
     "科学上网 节点": {
@@ -28,7 +28,7 @@
         "success": 28
     },
     "翻墙 订阅": {
-        "tested": 25,
-        "success": 19
+        "tested": 27,
+        "success": 20
     }
 }
