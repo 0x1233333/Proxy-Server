@@ -53,6 +53,10 @@ https://github.com/aviamastersgh/mtproto-free-russia
 https://github.com/bbylw/freevpn
 https://github.com/billlevis/free
 https://github.com/bq2015/FreeProxies
+https://github.com/bubu629/-free-clash-v2ray-singbox-meta-nodes-share-sub
+https://github.com/bubu629/asia-cn2-iplc-clash-v2ray-nodes-zhongguo-xianggang-taiwan
+https://github.com/bubu629/free-v2ray-clash-auto-subscription-pool
+https://github.com/bubu629/freee-vpn-v2ray-clash-nodes
 https://github.com/catcat0921/telegram_socks5_list
 https://github.com/cautonwong/free-proxy-sub
 https://github.com/chen08209/FlClash
@@ -70,6 +74,7 @@ https://github.com/deezertidal/freevpn
 https://github.com/diyeah-create/free
 https://github.com/ebrasha/abdal-proxy-hub
 https://github.com/feiniaovpn/--VPN
+https://github.com/fiamitaa/jichangtuijian
 https://github.com/fleyderrivera/payday-2-free-cheat-heist-toolkit
 https://github.com/freenodess/freenode
 https://github.com/fuqi-zeng/free
