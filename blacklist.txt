@@ -106,6 +106,7 @@ https://github.com/moslem880-fh/free-proxy-airport
 https://github.com/myikuns/vpnproxy
 https://github.com/nazo-no-llm-ojisan/gekiyasuLLM
 https://github.com/nodesfree/nodesfree.github.io
+https://github.com/officialputuid/KangProxy
 https://github.com/ohkl/airport-free
 https://github.com/opassoca/free-antigravity
 https://github.com/ovmvo/FreeSub
@@ -119,6 +120,7 @@ https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/share-daily/node
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
+https://github.com/stockimen/clashfree
 https://github.com/sunmiao4458/free-proxy-airport
 https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
