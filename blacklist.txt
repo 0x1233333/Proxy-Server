@@ -1,3 +1,4 @@
+https://github.com/0xRadikal/Free-Telegram-Proxy
 https://github.com/1000ttank/free-vpn-clash-aggregator
 https://github.com/6yyn/free-proxy-list
 https://github.com/A-Archives-and-Forks/clash-freenode
@@ -26,6 +27,7 @@ https://github.com/NotNoneX/Proxy-List
 https://github.com/OpenNetCN/clash
 https://github.com/ProxyScraper/ProxyScraper
 https://github.com/Raad63/Contry-bulk-xray-v2ray-vless-vmess-...-configs
+https://github.com/Reconss/free-clash-nodes
 https://github.com/Rm6B/Best_free_news_api
 https://github.com/Saka2e/AzadiHub
 https://github.com/Sibusiso6/proxy-list
@@ -86,6 +88,7 @@ https://github.com/gnxD3RfTT2WE/mass-http-proxy-list
 https://github.com/gos108/proxy
 https://github.com/gproxynet/free-proxy-list
 https://github.com/gxyandy/FreeProxiesSubscribeForClash
+https://github.com/hdr050127-max/uniplan-engg2112
 https://github.com/hendrikbgr/Free-Proxy-Repo
 https://github.com/hnmmhao/free-proxy-hub
 https://github.com/hootie0971/claude-code-via-antigravity
@@ -122,8 +125,10 @@ https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
 https://github.com/stockimen/clashfree
 https://github.com/sunmiao4458/free-proxy-airport
+https://github.com/suryadev-sm/free-mtproto-proxy-list
 https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
+https://github.com/tgproxypink/telegram-proxy-list
 https://github.com/tolinkshare2/tolinkshare2.github.io
 https://github.com/tomaasz/litellm-free-models-proxy
 https://github.com/toml66l/fanqiang
@@ -140,3 +145,4 @@ https://github.com/widesheep62/Zeno-Clash-Full-Version
 https://github.com/xCtersReal/V2rayFree
 https://github.com/xyzs996/free-proxy-health-list
 https://github.com/yemixzy/free-proxy-list
+https://github.com/zhqdi11/69yuncheckin
