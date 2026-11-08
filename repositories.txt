@@ -112,6 +112,7 @@ https://github.com/amricangaildivert-bot/Akbargap-v2raysub-FREEDOMPROJECT
 https://github.com/aoyavp/WorkerVless2sub
 https://github.com/app-vpn/app-vpn.github.io
 https://github.com/at3al/free
+https://github.com/autoexe/V2RayConfig
 https://github.com/aviamastersgh/vpn-free-russia
 https://github.com/awesome-vpn/awesome-vpn
 https://github.com/azestkingscrown/Free_Proxy_List
@@ -177,6 +178,7 @@ https://github.com/fanninghau/.proxy
 https://github.com/fanqiang-jichang/fanqiang-jichang.github.io
 https://github.com/fanqiang2025/fanqiang2025.github.io
 https://github.com/fanqiangclash/fanqiangclash.github.io
+https://github.com/fanqiangjichang/fanqiangjichang.github.io
 https://github.com/fanqiangv2ray/fanqiangv2ray.github.io
 https://github.com/fengye0903/FreeNodes
 https://github.com/fenwehome/WorkerVless2sub
@@ -223,6 +225,7 @@ https://github.com/gfpcom/free-proxy-list
 https://github.com/githubwubian/AutoMergePublicNodes
 https://github.com/githubwubian/CloudflareIP
 https://github.com/gowing520/AutoMergePublicNodes
+https://github.com/grisha-seleznev/free-vless-keys-russia
 https://github.com/gslege/CloudflareIP
 https://github.com/guangshanhl/CloudflareIP
 https://github.com/hello-world-1989/cn-news
@@ -238,6 +241,7 @@ https://github.com/hotsjake/V2Ray_configs_64
 https://github.com/hua9898998/mycookie
 https://github.com/huoji-111/WorkerVless2sub
 https://github.com/iboxz/free-v2ray-collector
+https://github.com/icecome/free-proxy-airport
 https://github.com/igareck/vpn-configs-for-russia
 https://github.com/indiavpn/indiavpn.github.io
 https://github.com/iplocate/free-proxy-list
@@ -258,8 +262,10 @@ https://github.com/jing5460/Free-servers
 https://github.com/junjun266/FreeProxyGo
 https://github.com/keerzzz/V2Ray_configs_64
 https://github.com/kejixiaoqi666/xboard-node-rust
+https://github.com/kevinandlee/free
 https://github.com/kmyinrui/Scrape-By-Country
 https://github.com/kooker/FreeSubsCheck
+https://github.com/koreavpn/koreavpn.github.io
 https://github.com/kort0881/vpn-vless-configs-russia
 https://github.com/laoxinwu/youxuanWorkerVless2sub
 https://github.com/le45tx1m/Pawdroid
@@ -287,6 +293,7 @@ https://github.com/miladtahanian/V2RayCFGTesterPro
 https://github.com/mirrorrepomagic/free-v2ray-public-list
 https://github.com/mmpx12/proxy-list
 https://github.com/mohsenbaqerii1990-spec/V2ray-Config
+https://github.com/mojiansheng/Free-servers
 https://github.com/monosans/proxy-list
 https://github.com/moqianbing/Free-Nodes
 https://github.com/mrjxyz/Cloudflare_vless_trojan
@@ -295,6 +302,7 @@ https://github.com/muxd93/awesome-vpn
 https://github.com/n3rddd/AutoMergePublicNodes
 https://github.com/naravid19/checked-proxies
 https://github.com/nodesfree/clashnode
+https://github.com/nodesradar/nodesradar-zh
 https://github.com/nodev2rayclash/nodev2rayclash.github.io
 https://github.com/nodev2rayn/nodev2rayn.github.io
 https://github.com/nostalume/FreeNodes

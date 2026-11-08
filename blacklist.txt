@@ -2,6 +2,7 @@ https://github.com/0xRadikal/Free-Telegram-Proxy
 https://github.com/1000ttank/free-vpn-clash-aggregator
 https://github.com/6yyn/free-proxy-list
 https://github.com/A-Archives-and-Forks/clash-freenode
+https://github.com/Akshay7273/ProxyMan-free-proxy-list
 https://github.com/Alanosy/cf-proxy-ex
 https://github.com/AllenAnderson216/am-cf-tunnel
 https://github.com/Aminul-Islam7/rds4plus
@@ -123,6 +124,7 @@ https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/share-daily/node
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
+https://github.com/solproxy/sol-free-proxy-list
 https://github.com/stockimen/clashfree
 https://github.com/sunmiao4458/free-proxy-airport
 https://github.com/suryadev-sm/free-mtproto-proxy-list
@@ -145,4 +147,5 @@ https://github.com/widesheep62/Zeno-Clash-Full-Version
 https://github.com/xCtersReal/V2rayFree
 https://github.com/xyzs996/free-proxy-health-list
 https://github.com/yemixzy/free-proxy-list
+https://github.com/zhanglunet/open-free-router
 https://github.com/zhqdi11/69yuncheckin
