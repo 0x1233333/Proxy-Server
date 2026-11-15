@@ -107,6 +107,7 @@ https://github.com/mehdirzfx/v2ray-sub
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/moslem880-fh/free-proxy-airport
+https://github.com/myikuns/jichangtz-tuijian
 https://github.com/myikuns/vpnproxy
 https://github.com/nazo-no-llm-ojisan/gekiyasuLLM
 https://github.com/nodesfree/nodesfree.github.io
@@ -124,10 +125,12 @@ https://github.com/sebastiancgomez/pin-speech-tts-studio
 https://github.com/share-daily/node
 https://github.com/sherlockhomes-max/youtube-viewer-bot
 https://github.com/sinspired/subs-check-pro
+https://github.com/slinxlink/node
 https://github.com/solproxy/sol-free-proxy-list
 https://github.com/stockimen/clashfree
 https://github.com/sunmiao4458/free-proxy-airport
 https://github.com/suryadev-sm/free-mtproto-proxy-list
+https://github.com/t0mi99i/fanqiang
 https://github.com/telegeam/clashfree
 https://github.com/tglaoshiji/clashfree
 https://github.com/tgproxypink/telegram-proxy-list
@@ -142,6 +145,8 @@ https://github.com/v2raynnodes/clashnode
 https://github.com/v2raynnodes/v2rayclash
 https://github.com/vAHiD55555/Free-Proxies
 https://github.com/vAHiD55555/bulk-xray-v2ray-vless-vmess-...-configs
+https://github.com/vpntuijian-jichangtuijian/vpntuijian-jichangtuijian.github.io
+https://github.com/walalers/still-for-twitch
 https://github.com/wazinwazinxd-bot/Proxy-Rotator-Engine
 https://github.com/widesheep62/Zeno-Clash-Full-Version
 https://github.com/xCtersReal/V2rayFree
