@@ -1,5 +1,6 @@
 https://github.com/0xRadikal/Free-Telegram-Proxy
 https://github.com/1000ttank/free-vpn-clash-aggregator
+https://github.com/481421824-sys/clash-free-pool
 https://github.com/6yyn/free-proxy-list
 https://github.com/A-Archives-and-Forks/clash-freenode
 https://github.com/Akshay7273/ProxyMan-free-proxy-list
@@ -19,6 +20,7 @@ https://github.com/FreeVPNHub/clashfree
 https://github.com/GLSGAMMING/Proxy-Rotator-Suite
 https://github.com/Ian-Lusule/Proxies
 https://github.com/Jametkudasigan/proxy-globe
+https://github.com/Komeiji6/Clash-config
 https://github.com/LancelotRar/free-subs
 https://github.com/LengJiaoSupport/FlClash
 https://github.com/Link-Start/clashfree-free-nodes
@@ -34,6 +36,7 @@ https://github.com/Saka2e/AzadiHub
 https://github.com/Sibusiso6/proxy-list
 https://github.com/Skillter/ProxyGather
 https://github.com/SnapdragonLee/SystemProxy
+https://github.com/SnishaperTeam/FlowWeaver
 https://github.com/StrangeSid/yetanotherproxy-gh
 https://github.com/Surfboardv2ray/Proxy-sorter
 https://github.com/TG-NAV/nodeshare
@@ -51,6 +54,7 @@ https://github.com/abshare3/abshare3.github.io
 https://github.com/adasd223/anonymous-proxy-list-free
 https://github.com/ahahaabas/anonymous-proxy-list-free
 https://github.com/ajaxfan/abshare.github.io
+https://github.com/akpig/foxdetector
 https://github.com/anutmagang/Free-HighQuality-Proxy-Socks
 https://github.com/aviamastersgh/mtproto-free-russia
 https://github.com/bbylw/freevpn
@@ -98,18 +102,23 @@ https://github.com/hproxy-com/free-proxy-list
 https://github.com/hzexe/zen-free-proxy-updates
 https://github.com/jianming18/freeproxy
 https://github.com/jichangtuijian-cheap/cheap-airports
+https://github.com/joelee7928/Jsnzkpg
 https://github.com/keeejiii/FlClash
 https://github.com/komutan234/Proxy-List-Free
 https://github.com/latifangren/Free-HighQuality-Proxy-Socks
+https://github.com/leon-x-labs/vless-reality.github.io
 https://github.com/liangshengyong/LanWan
 https://github.com/maech01/free-proxy-airport
 https://github.com/mehdirzfx/v2ray-sub
+https://github.com/meisamodin/v2fall-updates
+https://github.com/memedadada-hub/best-cf-ips
 https://github.com/mkshare3/mkshare3.github.io
 https://github.com/mksshare/mksshare.github.io
 https://github.com/moslem880-fh/free-proxy-airport
 https://github.com/myikuns/jichangtz-tuijian
 https://github.com/myikuns/vpnproxy
 https://github.com/nazo-no-llm-ojisan/gekiyasuLLM
+https://github.com/nffluaefoanr/PROXY-List
 https://github.com/nodesfree/nodesfree.github.io
 https://github.com/officialputuid/KangProxy
 https://github.com/ohkl/airport-free
@@ -151,6 +160,8 @@ https://github.com/wazinwazinxd-bot/Proxy-Rotator-Engine
 https://github.com/widesheep62/Zeno-Clash-Full-Version
 https://github.com/xCtersReal/V2rayFree
 https://github.com/xyzs996/free-proxy-health-list
+https://github.com/ycultnaig/latest_jichang
 https://github.com/yemixzy/free-proxy-list
+https://github.com/yijigu783/free-nodes
 https://github.com/zhanglunet/open-free-router
 https://github.com/zhqdi11/69yuncheckin
